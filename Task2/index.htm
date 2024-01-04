@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first web page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading1">My first web page</h1>
+      <div class="space"></div>
+      <h2 class="heading2">What this is</h2>
+
+      <p class="para1">
+        Welcome to my first web page.I created this webpage without the
+        assistance of webpage editors.Just my little text editor and a keen
+        <strong>UNDERSTANDING OF HTML</strong>.
+      </p>
+      <h2 class="why heading2">Why this is</h2>
+      <ul class="list1">
+        <li>To learn HTML</li>
+        <li>
+          List element
+          <ol>
+            <li>Home</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>About</li>
+          </ol>
+        </li>
+        <li>Here I have created ordered and unordered list.</li>
+      </ul>
+
+      <h2 class="Zeus heading2">ZeusLearning.com</h2>
+
+      <a class="link1" href="http://www.ZeusLearning.com" target="_blank"
+        >This link will open ZeusLearning.com in new tab</a
+      >
+
+      <h2 class="Google heading2">
+        On click of following image navigate to Gooogle.com
+      </h2>
+      <a class="google" href="http://www.google.com">
+        <img
+          src="./google.webp"
+          alt="Google logo"
+          style="height: 150px; width: 300px"
+        />
+      </a>
+
+      <br />
+      <br />
+      <h3 class="heading3">Some random table</h3>
+      <table class="table1" style="border: 2px solid black">
+        <tr style="border: 2px solid black">
+          <td style="border: 2px solid black">Row 1, cell 1</td>
+          <td style="border: 2px solid black">Row 1, cell 2</td>
+          <td style="border: 2px solid black">Row 1, cell 3</td>
+        </tr>
+        <tr>
+          <td style="border: 2px solid black">Row 2, cell 1</td>
+          <td style="border: 2px solid black">Row 2, cell 2</td>
+          <td style="border: 2px solid black">Row 2, cell 3</td>
+        </tr>
+        <tr>
+          <td style="border: 2px solid black">Row 3, cell 1</td>
+          <td style="border: 2px solid black">Row 3, cell 2</td>
+          <td style="border: 2px solid black">Row 3, cell 3</td>
+        </tr>
+        <tr>
+          <td style="border: 2px solid black">Row 4, cell 1</td>
+          <td style="border: 2px solid black">Row 4, cell 2</td>
+          <td style="border: 2px solid black">Row 4, cell 3</td>
+        </tr>
+      </table>
+      <h3 class="heading3">Some random form</h3>
+      <p class="para2">
+        <strong class="note">NOTE: </strong>It looks the part,but won't do a
+        anything.
+      </p>
+
+      <form method="post">
+        <label for="name">Name:</label>
+        <br />
+        <br />
+        <input type="text" name="name" placeholder="Your name" id="name" />
+
+        <br />
+        <br />
+        <label for="Comments">Comments:</label>
+        <br />
+        <br />
+        <!-- <input
+          type="text"
+          style="width: 200px; height: 100px"
+          name="comments"
+          id="comments"
+        /> -->
+        <textarea cols="30" rows="15" placeholder="Your comments"></textarea>
+
+        <br />
+        <br />
+        <!-- <fieldset data-role="gender"> -->
+        <legend>Are you:</legend>
+
+        <br />
+        <table>
+          <tr>
+            <td>
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                checked
+              />
+              <label for="male">Male</label>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td>
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">Female</label>
+            </td>
+          </tr>
+        </table>
+        <!-- </fieldset> -->
+        <!-- <button type="submit"></button> -->
+        <br />
+
+        <input type="submit" value="Submit Query" />
+      </form>
+    </div>
+  </body>
+</html>
