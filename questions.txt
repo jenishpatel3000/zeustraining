@@ -1,0 +1,234 @@
+------------------------------------------------------------------HTML TASK------------------------------------------------------------------------------------------
+
+1.What is HTML? Give basic structure of the HTML page.
+Answer:-HTML means HyperText Markup Language. It is the standard language used to create and design webpages. It provides a structure for content on the web. It allows developers to define and organize different parts of a webpage, such as headings, paragraphs, images, links, forms, and more.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+</head>
+<body>
+  <!-- Content goes here -->
+</body>
+</html>
+
+
+
+
+
+
+2.Difference between inline and block level element.
+Answer:-
+
+Block-level elements:
+
+They start on a new line and take up the full width available.
+e.g., <div>, <p>, <h1> to <h6>, <ul>, <ol>, <li>, and more.
+Block-level elements can contain other block-level and inline elements.
+
+Inline elements:
+
+They do not start on a new line and only take up as much width as necessary.
+e.g., <span>, <a>, <strong>, <em>, <img>, and more.
+Inline elements are often used within block-level elements and do not force a new line after them.
+
+
+
+
+------------------------------------------------------------------CSS TASK------------------------------------------------------------------------------------------
+
+
+1. Explain the different ways in which CSS can be applied to HTML, what is the preferred way and why?
+ANSWER:- 
+
+Different Ways CSS Can Be Applied to HTML:
+
+->Inline CSS:
+		Applied directly to the HTML elements using the style attribute.
+		Example: <p style="color: blue;">This is a blue paragraph.</p>
+
+->Internal (or Embedded) CSS:
+
+		Defined within the HTML document using the <style> element in the <head> section.
+		Example:
+
+			<head>
+  				<style>
+    					p {
+      						color: green;
+    					  }
+  				</style>
+			</head>
+			<body>
+  				<p>This is a green paragraph.</p>
+			</body>
+
+->External CSS:
+
+		Placed in a separate external stylesheet file (e.g., styles.css) and linked to the HTML document.
+		Example:
+
+		<head>
+  			<link rel="stylesheet" type="text/css" href="styles.css">
+		</head>
+
+->Preferred Way and Why:
+	The preferred way is often external CSS. This approach separates the structure (HTML) from the presentation (CSS), promoting cleaner and more maintainable code. It allows for 	consistency across multiple pages, easy updates, and better organization of styles.
+
+
+
+2. What are different CSS selectors, with example explain Element, Class and Id selectors.
+ANSWER:-
+
+Different CSS Selectors:
+
+->Element Selector:
+
+	Selects HTML elements based on their name.
+	Example: p { color: red; }
+
+->Class Selector:
+
+	Selects elements with a specific class attribute.
+	Example: .highlight { background-color: yellow; }
+->ID Selector:
+
+	Selects a single element with a specific id attribute.
+	Example: #header { font-size: 24px; }
+->Universal Selector (*):
+
+	Selects all elements on the page.
+	Example: * { margin: 0; padding: 0; }
+->Descendant Selector (whitespace):
+
+	Selects all elements that are descendants of a specified element.
+	Example: div p { color: blue; } (selects all <p> elements inside a <div>)
+->Child Selector (>):
+
+	Selects all direct children of a specified element.
+	Example: ul > li { list-style-type: square; } (selects only direct <li> children of a <ul>)
+->Adjacent Sibling Selector (+):
+
+	Selects an element that is directly preceded by a specified element.
+	Example: h2 + p { font-style: italic; } (selects the <p> immediately following an <h2>)
+->Attribute Selector ([attribute=value]):
+
+	Selects elements with a specific attribute and value.
+	Example: input[type="text"] { width: 200px; }
+->Attribute Starts With Selector ([attribute^=value]):
+
+	Selects elements with an attribute that starts with a specific value.
+	Example: a[href^="https://"] { color: green; }
+->Attribute Ends With Selector ([attribute$=value]):
+
+	Selects elements with an attribute that ends with a specific value.
+	Example: a[href$=".pdf"] { font-weight: bold; }
+->*Attribute Contains Selector ([attribute=value])**:
+
+	Selects elements with an attribute that contains a specific value.
+	Example: a[href*="example"] { text-decoration: underline; }
+->:hover Selector:
+
+	Selects and styles an element when the mouse hovers over it.
+	Example: a:hover { color: red; }
+->:nth-child() Selector:
+
+	Selects elements based on their position within a parent element.
+	Example: li:nth-child(even) { background-color: #f2f2f2; } (selects even-numbered <li> elements)
+
+
+
+3.With the help of a diagram explain CSS Box Model.
+ANSWER:-
+
+CSS Box Model:
+
+The CSS Box Model describes the structure of an HTML element as a rectangular box. It consists of the following components:
+
+Content: The actual content of the box, where text and images appear.
+Padding: Clears an area around the content inside the box. It is transparent.
+Border: A border surrounding the padding (if any). It can have a specific width and style.
+Margin: Clears an area outside the border. It is transparent.
+
+In the diagram:
+
+Content is represented by the innermost blue area.
+Padding is the space between the content and the border (orange area).
+Border is the line surrounding the padding.
+Margin is the space outside the border.
+Understanding the box model is crucial for layout design and spacing in CSS. It helps developers control the appearance and spacing of elements on a webpage.
+
+
+
+
+
+------------------------------------------------------------------JAVASCRIPT TASK------------------------------------------------------------------------------------------
+
+
+
+
+1.List down ways in which JavaScript command can be added to a webpage, what is the preferred way.
+ANSWER:-
+JavaScript code can be added to a webpage in several ways. The preferred method often depends on the specific use case and development best practices. Here are common ways to include JavaScript in a webpage:
+
+1. Inline Script:
+   - Placing JavaScript directly within the HTML document using the `<script>` tag in the body or head section.
+   - Example:
+     ```html
+     <script>
+       // Your JavaScript code here
+       alert("Hello, World!");
+     </script>
+     ```
+
+2. External Script File:
+   - Creating a separate JavaScript file (e.g., `script.js`) and linking it to the HTML document using the `<script>` tag with the `src` attribute.
+   - Example:
+     ```html
+     <script src="script.js"></script>
+     ```
+
+3. Event Attributes:
+   - Adding JavaScript code directly to HTML elements as event attributes.
+   - Example:
+     ```html
+     <button onclick="myFunction()">Click me</button>
+     <script>
+       function myFunction() {
+         alert("Button clicked!");
+       }
+     </script>
+     ```
+
+4. Asynchronous Script Loading:
+   - Adding the `async` attribute to the `<script>` tag to load the script asynchronously while the HTML page continues parsing.
+   - Example:
+     ```html
+     <script async src="script.js"></script>
+     ```
+
+5. Defer Attribute:
+   - Adding the `defer` attribute to the `<script>` tag to defer script execution until the HTML parsing is complete.
+   - Example:
+     ```html
+     <script defer src="script.js"></script>
+     ```
+
+6. DOMContentLoaded Event:
+   - Wrapping JavaScript code in an event listener for the `DOMContentLoaded` event to ensure the script runs after the HTML content is fully loaded.
+   - Example:
+     ```html
+     <script>
+       document.addEventListener("DOMContentLoaded", function() {
+         // Your JavaScript code here
+         alert("DOM content loaded!");
+       });
+     </script>
+     ```
+
+Preferred Way:
+The preferred way to include JavaScript in a webpage depends on the project requirements and best practices. For better maintainability, separating JavaScript into external files and linking them in the HTML using the `<script>` tag with the `defer` attribute is often recommended. This approach keeps the HTML cleaner, allows for better organization of code, and supports optimal loading performance.
