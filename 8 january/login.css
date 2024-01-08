@@ -405,6 +405,97 @@ body {
   }
   /* You can similarly adjust other elements' styles */
 }
+/* For screens with a height greater than 780px */
+@media screen and (min-height: 820px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 70px; /* Adjust top margin for better positioning */
+    height: 600px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 870px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 80px; /* Adjust top margin for better positioning */
+    height: 620px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 900px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 100px; /* Adjust top margin for better positioning */
+    height: 650px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 940px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 140px; /* Adjust top margin for better positioning */
+    height: 680px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 1000px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 160px; /* Adjust top margin for better positioning */
+    height: 700px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 1050px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 180px; /* Adjust top margin for better positioning */
+    height: 720px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 1100px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 200px; /* Adjust top margin for better positioning */
+    height: 750px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 1150px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 220px; /* Adjust top margin for better positioning */
+    height: 780px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
+@media screen and (min-height: 1200px) {
+  /* Adjust your styles for screens taller than 780px */
+  .login-container {
+    /* Example style changes */
+    margin-top: 240px; /* Adjust top margin for better positioning */
+    height: 800px; /* Increase height for better content display */
+  }
+
+  /* You can similarly adjust other elements' styles */
+}
 
 /* General styles for other screen sizes (default or larger screens) */
 /* Add styles that should apply to screens larger than 1024x798 or 768x1024 */
