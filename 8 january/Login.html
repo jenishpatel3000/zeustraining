@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Login page</title>
+  </head>
+  <body>
+  
+    <div class="container">
+        <div class="sub-container1">
+
+            <span class="navbar">
+                <img
+                class="header_logo"
+                src="./quantum screen assets/icons/logo used in header.svg"
+                alt="QUANTUM logo"
+                />
+            </span>
+            <div class="blueline1"></div>
+        </div>
+      <div class="login-container">
+          <div class="blueline"></div>
+        <div class="content">
+          <div class="card-head">
+            <svg
+              id="back"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g id="Bounding_Boxes">
+                <path
+                  id="Path_1831"
+                  data-name="Path 1831"
+                  d="M0,0H24V24H0Z"
+                  fill="none"
+                />
+              </g>
+              <g id="Outline_1_">
+                <path
+                  class="back"
+                  id="Path_1832"
+                  data-name="Path 1832"
+                  d="M20,11H7.83l5.59-5.59L12,4,4,12l8,8,1.41-1.41L7.83,13H20Z"
+                  fill="#1f7a54"
+                />
+              </g>
+            </svg>
+            <!-- <h1 class="card-heading">Log in with Quantum</h1> -->
+            <h2 class="heading_box">Log in with Quantum</h2>
+          </div>
+          <form method="post">
+            <label class="school-type">
+              <input
+                type="radio"
+                class="radio"
+                name="school-type"
+                value="district"
+              />
+              <p class="label label1">District</p>
+              <input
+                type="radio"
+                class="radio"
+                name="school-type"
+                value="independent"
+              />
+              <p class="label label2">Independent school</p>
+            </label>
+            <!-- <select class="state" id="state" name="state">
+            <option value="" disabled selected>Select State</option>
+            
+            <option value="alabama">Alabama</option>
+        </select> -->
+
+            <!-- Similar dropdown for district -->
+
+            <div class="inputContainer">
+  <label class="inputLabel" >State*</label>
+  <select required="true" class="customInput" id="ci1" name="state">
+    <option class="option" value="" disabled selected>Select your state</option>
+    <option class="option" value="Alabama" selected>Alabama</option>
+    <option value="Alaska" class="option">Alaska</option>
+    <option value="Arizona" class="option">Arizona</option>
+    <!-- Add more options as needed -->
+  </select>
+  <div class="inputUnderline"></div>
+</div>
+
+            
+            <div class="inputContainer space-district">
+  <label class="inputLabel dis" >District*</label>
+  <select required="true" class="customInput" id="ci2" name="district">
+    <option value="" disabled selected>Select your district</option>
+    <option value="District 1" selected>Alabama School District</option>
+    <option value="District 2">District 2</option>
+    <option value="District 3">District 3</option>
+    <!-- Add more options as needed -->
+  </select>
+  <div class="inputUnderline"></div>
+</div>
+
+            <div class="inputContainer1">
+              <input
+                type="text"
+                required=""
+                class="customInput u1"
+                name="username"
+                placeholder="Username/Email ID*"
+              />
+              <!-- <label class="inputLabel">Username</label> -->
+              <div class="inputUnderline"></div>
+            </div>
+            <div class="forgot">FORGOT USERNAME?</div>
+
+           <div class="inputContainer2">
+            <div class="passwordWrapper">
+
+                <input
+                type="password"
+                required=""
+                class="customInput u1"
+                name="password"
+                id="passwordField"
+                placeholder="Password*"
+                />
+                <button type="button" class="showPasswordBtn" onclick="togglePassword()">
+                    <img class="showPassword" src="./quantum screen assets/icons/preview.svg" alt="hamburger icon">
+                </button>
+                <div class="inputUnderline"></div>
+            </div>
+</div>
+<div class="forgot">FORGOT PASSWORD?</div>
+
+
+            <label class="remember"
+              ><input type="checkbox" class="rem-check" /> Remember Me</label
+            >
+
+        </div>
+            <!-- Login button -->
+            <div class="button-div">
+              <button class="submit" type="submit">
+            <span class="btn-text">
+            
+                LOG IN
+            </span>
+            </button>
+            </div>
+          </form>
+
+        </div>
+          <!-- Footer links -->
+        </div>
+          <footer class="footer-container">
+
+              <div class="footer">
+                  <span class="about">
+                      About
+                  </span>
+                   | 
+                   <div class="contactus">
+                    Contact Us
+                   </div> 
+                </div>
+                <div class="last-line">
+                    <img class="footer-logo" src="./quantum screen assets/icons/logo used in footer.svg" alt="Quantum logo"/>
+                    <p class="pipe"></p>
+                    <p class="copyright f1">Copyright © 2020-2021</p>
+                    <p class="zeus f1">Zeus Systems Pvt. Ltd.</p>
+                    <p class="rights f1">All rights reserved.</p>
+
+
+                </div>
+            </footer>
+            <script>
+                function togglePassword() {
+  const passwordField = document.getElementById('passwordField');
+  if (passwordField.type === 'password') {
+    passwordField.type = 'text';
+  } else {
+    passwordField.type = 'password';
+  }
+}
+
+            </script>
+  </body>
+</html>
