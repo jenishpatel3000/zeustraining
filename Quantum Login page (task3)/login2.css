@@ -12,9 +12,9 @@ body {
 }
 
 .navbar {
-  background: transparent ("./quantum screen assets/header pattern svg.svg") 0% 0% repeat-x;
+  background: transparent url("./quantum screen assets/quantum screen assets/header pattern image.png  ");
   background-color: #25313f;
-  mix-blend-mode: darken;
+  /* mix-blend-mode: darken; */
   background-blend-mode: overlay;
   height: 5.6rem;
   display: flex;
