@@ -62,9 +62,9 @@ body {
 
 .radio-options {
     height: 5.6rem;
+    float: right;
     display: flex;
     /* flex-wrap: wrap; */
-    float: right;
 }
 
 .radio-options .radio {
@@ -171,7 +171,7 @@ body {
     margin-left: .8rem;
     height: 1.8rem;
     text-align: center;
-    font: normal normal medium 1.4rem/1.8rem Quicksand;
+    font: normal normal medium 1.4rem/1.8rem "Quicksand";
     letter-spacing: 0rem;
     color: #1f7a54;
     opacity: 1;
@@ -905,35 +905,13 @@ body {
     background: #000000 0% 0% no-repeat padding-box;
 }
 
-@media only screen and (max-width: 1024rem) and (max-height: 768rem) {
 
+
+@media screen and (max-width: 850px) {
     .navbar-options {
         display: none;
-    }
+        visibility: hidden;
 
-    .hamburger-icon {
-        display: block;
-        visibility: visible;
-        margin-right: 2.4rem;
-
-    }
-
-    .buttonend {
-        margin-right: 3.2rem;
-    }
-
-    .container {
-        /* Example adjustment */
-        grid-template-rows: auto;
-    }
-
-    /* Adjust other elements as needed */
-}
-
-
-@media screen and (max-width: 768px) and (min-height: 798px) {
-    .navbar-options {
-        display: none;
     }
 
     .hamburger-icon {
@@ -953,21 +931,27 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) and (min-height: 1024px) {
+@media screen and (min-width: 900px) {
     .navbar-options {
-        display: flex;
+        display: block;
+        visibility: visible;
+
     }
 
-    /* .hamburger-icon {
-    display: block;
-    visibility: visible;
-    margin-right: 24rem;
+    /* .navbar {
+        justify-content: space-between;
+    } */
 
-  }
+    .hamburger-icon {
+        display: none;
+        visibility: hidden;
+        margin-right: 2.4rem;
 
-  .buttonend {
-    margin-right: 32rem;
-  } */
+    }
+
+    .buttonend {
+        margin-right: 3.2rem;
+    }
 
     .container {
         /* Example adjustment */
@@ -975,7 +959,7 @@ body {
     }
 }
 
-@media screen and (min-height: 890px) {
+/* @media screen and (min-height: 890px) {
     .html {
         font-size: 65%;
     }
@@ -984,4 +968,4 @@ body {
         grid-template-rows: auto;
     }
 
-}
+} */
