@@ -7,11 +7,14 @@ body {
   background-color: #eeeeee;
 }
 .navbar {
-  background: transparent ("./quantum screen assets/header pattern svg.svg") 0%
-    0% repeat-x;
   background-color: #25313f;
-  mix-blend-mode: darken;
-  background-blend-mode: overlay;
+  background: transparent ("./quantum screen assets/header pattern image.png")
+    0% 0% no-repeat padding-box;
+  /* -webkit-mask-image: url("./quantum screen assets/header pattern svg.svg");
+  mask-image: url("./quantum screen assets/header pattern svg.svg"); */
+  /* mix-blend-mode: overlay; */
+  /* opacity: 0.8; */
+  /* background-blend-mode: overlay; */
   height: 56px;
   display: flex;
   align-items: center;
@@ -19,12 +22,12 @@ body {
   padding: 0;
 }
 .header_logo {
-  opacity: 1;
+  /* opacity: 1; */
   top: 11px;
   padding-left: 24px;
   width: auto;
   height: 36px;
-  opacity: 1;
+  /* opacity: 1; */
   margin: 0;
 }
 
