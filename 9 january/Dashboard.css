@@ -2,10 +2,11 @@
 
 body {
   font-family: "Quicksand", sans-serif;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #eeeeee;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .container {
@@ -430,6 +431,8 @@ body {
 
 .card-container {
   display: flex;
+  gap: 24px;
+  margin-top: 24px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -476,7 +479,7 @@ body {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 2px;
   opacity: 1;
-  margin: 25px 24px 25px 24px;
+  /* margin: 25px 24px 25px 24px; */
 }
 
 .card-img {
@@ -887,35 +890,11 @@ body {
   background: #000000 0% 0% no-repeat padding-box;
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 768px) {
-
+@media screen and (max-width: 950px) {
   .navbar-options {
     display: none;
-  }
+    visibility: hidden;
 
-  .hamburger-icon {
-    display: block;
-    visibility: visible;
-    margin-right: 24px;
-
-  }
-
-  .buttonend {
-    margin-right: 32px;
-  }
-
-  .container {
-    /* Example adjustment */
-    grid-template-rows: auto;
-  }
-
-  /* Adjust other elements as needed */
-}
-
-
-@media screen and (max-width: 768px) and (min-height: 798px) {
-  .navbar-options {
-    display: none;
   }
 
   .hamburger-icon {
@@ -935,24 +914,46 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (min-height: 1024px) {
-  .navbar-options {
-    display: flex;
-  }
+/* @media screen and (max-width: 900px) {
+    html {
+        font-size: 54.223%;
+    }
+}
 
-  /* .hamburger-icon {
+@media screen and (max-width: 950px) {
+    html {
+        font-size: 58.5%;
+    }
+} */
+
+@media screen and (min-width:950px) {
+  /* html {
+        font-size: 58.5%;
+    } */
+
+  .navbar-options {
     display: block;
     visibility: visible;
+
+  }
+
+  /* .navbar {
+        justify-content: space-between;
+    } */
+
+  .hamburger-icon {
+    display: none;
+    visibility: hidden;
     margin-right: 24px;
 
   }
 
   .buttonend {
     margin-right: 32px;
-  } */
+  }
 
   .container {
-    /* Example adjustment */
     grid-template-rows: auto;
   }
+
 }

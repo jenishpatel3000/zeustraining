@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .container {
   display: block;
   margin-left: auto;
@@ -23,21 +25,20 @@
 .inner-container {
   margin-left: 14px;
 }
+
 .username {
-  font-family: "roboto";
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
   font-size: 20px;
   color: #000;
   margin: 0;
   padding: 0;
   margin-bottom: 14px;
-
-  /* padding-bottom: 14px; */
 }
+
 .tweet-info {
-  /* border: 2px solid rgb(95, 45, 53); */
-  font-family: "roboto";
-  font-weight: Regular;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   font-size: 20px;
   color: #000;
   margin: 0;
@@ -47,10 +48,11 @@
 
 .button-container {
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   flex-direction: row;
   margin: 0;
+  margin-left: 3 px;
   padding: 0;
 }
 
@@ -58,6 +60,8 @@
   margin: 0;
   padding: 0;
   height: 20px;
+  accent-color: #858991;
+  opacity: 0.6;
   width: 20px;
   margin-right: 14px;
 }
@@ -71,8 +75,8 @@
 }
 
 .count {
-  font-family: "roboto";
-  font-weight: Medium;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   font-size: 15px;
   color: #858991;
   margin: 0;
