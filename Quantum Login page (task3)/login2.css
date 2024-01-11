@@ -1,6 +1,27 @@
-.container {}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  /* background-color: #e0e1e1; */
+  /* padding: 1rem; */
+  text-align: center;
+}
 
 html {
+  font-size: 62.5%;
   font-size: 62.5%;
 }
 
@@ -9,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eeeeee;
+
 }
 
 .navbar {
@@ -86,7 +108,7 @@ body {
   padding-left: 7.7rem;
   font-family: Quicksand;
   font-size: 2.4rem;
-  font: normal normal medium 2.4rem/2.8rem Quicksand;
+  /* font: normal normal medium 2.4rem/2.8rem Quicksand; */
   letter-spacing: 0rem;
   color: #222222;
   opacity: 1;
@@ -99,30 +121,28 @@ body {
 
 .school-type {
   font-family: "Quicksand";
-  font-weight: medium;
+  font-weight: 500;
   display: flex;
   justify-content: left;
   align-items: center;
   text-align: left;
   font-size: 1.6rem;
-  font: normal normal medium 1.6rem/2rem Quicksand;
+  /* font: normal normal medium 1.6rem/2rem Quicksand; */
   letter-spacing: 0rem;
   color: #333333;
   opacity: 1;
-  margin-top: 3.4rem;
+  margin-top: 3.2rem;
   height: 2rem;
   padding: 0;
 }
 
 .radio {
-  padding-right: .8rem;
   margin: 0;
   padding: 0;
   width: 2rem;
   height: 2.4rem;
   margin-right: .8rem;
   text-align: left;
-  font-size: 2.4rem;
   font: normal normal normal 2.4rem/1.7rem "Material-Design-Iconic-Font";
   letter-spacing: 0rem;
   accent-color: #1f7a54;
@@ -133,7 +153,9 @@ body {
   margin: 0;
   height: 2.0rem;
   text-align: left;
-  font: normal normal medium 1.6rem/2.0rem "Quicksand";
+  font-size: 1.6rem;
+  font-family: "Quicksand";
+  /* font: normal normal medium 1.6rem/2.0rem "Quicksand"; */
   letter-spacing: 0rem;
   color: #333333;
   opacity: 1;
@@ -179,7 +201,6 @@ body {
   background-color: transparent;
   border: none;
   text-align: left;
-  font: normal medium 1.6rem/2.0rem "Quicksand";
   letter-spacing: 0rem;
   color: #222222;
   opacity: 1;
@@ -207,9 +228,8 @@ body {
   margin-left: 0;
   font-family: "Quicksand";
   text-align: left;
-  font: medium 1.2rem/1.6rem Quicksand;
   letter-spacing: 0rem;
-  color: #666666;
+  color: #a2a2a2;
   opacity: 1;
 }
 
@@ -241,8 +261,9 @@ body {
   margin-top: .5rem;
   text-align: right;
   font-size: 1.4rem;
-  font: normal normal medium 1.4rem/1.8rem Quicksand;
+  font-weight: 600;
   letter-spacing: 0rem;
+  text-decoration: none;
   color: #1f7a54;
   text-transform: uppercase;
   opacity: 1;
@@ -258,7 +279,6 @@ body {
   font-weight: bold;
   align-items: center;
   text-align: left;
-  font: normal normal medium 1.6rem/2.0rem Quicksand;
   letter-spacing: 0rem;
   color: #222222;
   opacity: 1;
@@ -337,7 +357,6 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
-  font: normal normal medium 1.4rem/1.8rem Quicksand;
   letter-spacing: 0rem;
   color: #1f2834;
   opacity: 1;
@@ -347,21 +366,23 @@ body {
   width: 4.0rem;
   height: 1.8rem;
   text-align: center;
-  font: normal normal medium 1.4rem/1.8rem Quicksand;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
   letter-spacing: 0rem;
   color: #1f7a54;
   opacity: 1;
   margin-right: .8rem;
-  font-size: 1.4rem;
 }
 
 .contactus {
-  width: 7.2rem;
+  /* width: 7.2rem; */
   font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
   margin-left: .8rem;
   height: 1.8rem;
   text-align: center;
-  font: normal normal medium 1.4rem/1.8rem Quicksand;
   letter-spacing: 0rem;
   color: #1f7a54;
   opacity: 1;
@@ -373,10 +394,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font: normal normal medium 1.4rem/1.8rem Quicksand;
+
+  font-family: "Quicksand", sans-serif;
   letter-spacing: 0rem;
   color: #1f7a54;
   opacity: 1;
+}
+
+.middleline {
+  width: 0px;
+  height: 1.8rem;
+  border: .1rem solid #0000001F;
+  opacity: 1;
+  /* background-color: #0000001F; */
 }
 
 .last-line {
@@ -407,8 +437,8 @@ body {
 .f1 {
   text-align: left;
   font-family: "Quicksand", sans-serif;
-  font-weight: medium;
-  font: medium 1.2rem/1.6rem Quicksand;
+  /* font-weight: medium; */
+  /* font: medium 1.2rem/1.6rem Quicksand; */
   letter-spacing: 0rem;
   color: #616161;
   opacity: 1;
@@ -460,6 +490,8 @@ body {
 
 }
 
+
+
 @media screen and (min-height: 780px) {
   .html {
     font-size: 65%;
@@ -472,22 +504,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 49rem;
-  }
-}
-
-@media screen and (min-height: 800px) {
-  .html {
-    font-size: 65%;
-  }
-
-  .login-container {
-    margin-top: 8rem;
-
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 49rem;
-    height: 57rem;
   }
 }
 
@@ -650,4 +666,51 @@ body {
     height: 66rem;
     /* height: 80rem; */
   }
+}
+
+/* ... Your existing CSS rules ... */
+
+/* Mobile screens */
+@media only screen and (max-width: 520px) {
+  html {
+    font-size: 40%;
+  }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 28%;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 250px) {
+  html {
+    font-size: 25%;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 170px) {
+  html {
+    font-size: 15%;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 110px) {
+  html {
+    font-size: 10%;
+  }
+
+
+
 }
