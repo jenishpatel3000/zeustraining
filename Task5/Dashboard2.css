@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 html {
-    /* width: 100%; */
     font-size: 62.5%;
     max-width: 100%;
     margin: 0;
@@ -19,7 +18,6 @@ html {
 }
 
 body {
-    /* height: 100%; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,29 +26,12 @@ body {
     padding: 0;
     background-color: #eeeeee;
     overflow-x: hidden;
-    /* height: 100vh; */
 }
-
-/* 
-.container {
-    display: grid;
-    grid-template-rows: 5.6rem auto;
-}
-
-.sub-container1 {
-    grid-row: 1/2;
-}
-
-.sub-container2 {
-    grid-row: 2/3;
-} */
-
 
 /* ---------------------navbar------------------- */
 .navbar {
     background: transparent url("./quantum screen assets/quantum screen assets/header pattern image.png  ");
     background-color: #25313f;
-    /* mix-blend-mode: darken; */
     background-blend-mode: overlay;
     height: 5.6rem;
     display: flex;
@@ -71,8 +52,6 @@ body {
 .navbar-options {
     height: 5.6rem;
     width: 100%;
-    /* UI Properties */
-    /* background: #8ddc97 0% 0% no-repeat padding-box; */
     border-radius: .2rem;
     opacity: 1;
 }
@@ -81,20 +60,16 @@ body {
     height: 5.6rem;
     float: right;
     display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .radio-options .radio {
     flex: 1 1 auto;
     text-align: center;
-
 }
 
 .option1 {
-    /* width: 86px; */
     height: 18px;
     text-align: center;
-    /* color: #3FD28B; */
     opacity: 1;
 }
 
@@ -110,11 +85,8 @@ body {
     padding: 0 .4rem;
     height: 5.2rem;
     margin-right: 3.2rem;
-
-
     font-size: 1.4rem;
     font-weight: bold;
-
     font: normal normal medium 14px/14px Quicksand;
     letter-spacing: 0px;
     color: #3FD28B;
@@ -130,6 +102,8 @@ body {
 .option-box {}
 
 .hamburger-icon {
+    width: 3rem;
+    height: 2.6rem;
     display: none;
     visibility: hidden;
 }
@@ -151,7 +125,6 @@ body {
 }
 
 .buttonend {
-
     margin: 0;
     padding: 0;
     margin-right: 2.4rem;
@@ -162,7 +135,6 @@ body {
     margin: 0;
     padding: 0;
     height: 2.4rem;
-    /* UI Properties */
     text-align: left;
     letter-spacing: -0.06rem;
     color: #3FD28B;
@@ -172,9 +144,6 @@ body {
 .announcement-img {
     width: 2rem;
     height: 2rem;
-    /* UI Properties */
-    /* background: #3FD28B 0% 0% no-repeat padding-box; */
-    /* opacity: 1; */
 }
 
 .account-img {
@@ -197,7 +166,6 @@ body {
 }
 
 .contactus {
-    /* width: 7.2rem; */
     font-size: 1.4rem;
     font-weight: 600;
     font-family: "Quicksand", sans-serif;
@@ -209,14 +177,12 @@ body {
     opacity: 1;
 }
 
-
 .footer {
     margin-top: 6.65rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     font-family: "Quicksand", sans-serif;
     letter-spacing: 0rem;
     color: #1f7a54;
@@ -228,7 +194,6 @@ body {
     height: 1.8rem;
     border: .1rem solid #0000001F;
     opacity: 1;
-    /* background-color: #0000001F; */
 }
 
 .last-line {
@@ -259,8 +224,6 @@ body {
 .f1 {
     text-align: left;
     font-family: "Quicksand", sans-serif;
-    /* font-weight: medium; */
-    /* font: medium 1.2rem/1.6rem Quicksand; */
     letter-spacing: 0rem;
     color: #616161;
     opacity: 1;
@@ -286,10 +249,6 @@ body {
 
 /* ---------------------main page------------------- */
 
-
-
-
-
 .content {
     display: flex;
     justify-content: center;
@@ -298,14 +257,12 @@ body {
     margin: 2.4rem;
 }
 
-
 /*          green rectangle start */
 
 
 .green-rectangle {
     height: 6.4rem;
     width: 100%;
-    /* UI Properties */
     background: #8ddc97 0% 0% no-repeat padding-box;
     border-radius: .2rem;
     opacity: 1;
@@ -333,27 +290,16 @@ body {
     align-items: center;
     justify-content: center;
     height: 6.0rem;
-
-
-    /* border-radius: 0.5rem; */
-    /* border: none; */
-    /* padding: 0.5rem 0; */
-
     color: rgba(51, 65, 85, 1);
     transition: all 0.15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked+.name {
-    /* background-color: #fff; */
-
     border-bottom: .4rem solid #222222;
-    /* font-weight: 600; */
 }
 
 .radio-inputs .radio input:checked+.option-container {
-    /* background-color: #fff; */
     border-bottom: .4rem solid #222222;
-    /* font-weight: 600; */
 }
 
 .option-container {
@@ -363,7 +309,16 @@ body {
     flex-direction: row;
     width: 11.4rem;
     height: 3.2rem;
-    /* font-size: ; */
+}
+
+.logo1 {
+    width: 2.6rem;
+    height: 4rem;
+}
+
+.logo2 {
+    width: 2.9rem;
+    height: 3.2rem;
 }
 
 .count1 {
@@ -373,7 +328,6 @@ body {
     font-size: 2.4rem;
     font-weight: bold;
     font-family: "Quicksand", sans-serif;
-    /* font: normal normal bold 24/28px Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -382,13 +336,11 @@ body {
 }
 
 .option-name1 {
-    /* width: 60px;  */
     height: 2rem;
     text-align: left;
     font-size: 1.6rem;
     font-weight: bold;
     font-family: "Quicksand", sans-serif;
-    /* font: normal normal medium 16px/20px Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -403,7 +355,6 @@ body {
     width: 100%;
     height: 2.8rem;
     justify-content: space-between;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: row;
     margin-top: 2.4rem;
@@ -411,12 +362,10 @@ body {
 }
 
 .left-content {
-    /* float: left; */
     width: 13.6rem;
     height: 1.5rem;
     text-align: left;
     font-size: 1.2rem;
-    /* font: normal normal medium 12rem/14rem Quicksand;. */
     letter-spacing: 0rem;
     color: #686868;
     opacity: 1;
@@ -434,8 +383,6 @@ body {
 .inputContainer {
     height: 2.0rem;
     padding-bottom: .5rem;
-    /* margin-top: 23rem; */
-    position: relative;
 }
 
 .customInput {
@@ -451,15 +398,20 @@ body {
     border: none;
     text-align: left;
     font-family: "Quicksand", "Helvetica Neue", sans-serif;
-    /* font: normal normal medium 16rem/20rem Quicksand; */
     letter-spacing: 0rem;
     color: #333333;
     opacity: 1;
     outline: none;
     transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('./quantum screen assets/quantum screen assets/icons/arrow-down.svg');
+    background-size: 3rem 2.5rem;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 2.0rem;
 }
-
-.noselect {}
 
 .customInput:focus,
 .customInput:not(:placeholder-shown) {
@@ -477,30 +429,27 @@ body {
     height: 1.5rem;
     font-size: 1.2rem;
     margin-right: .6rem;
-    /* font-weight: medium; */
-    /* padding-bottom: 5rem; */
     padding-left: 0;
     margin-left: 0;
     font-family: "Quicksand";
     text-align: left;
-    /* font: medium 12rem/16rem Quicksand; */
     letter-spacing: 0rem;
     color: #666666;
     opacity: 1;
 }
 
 .inputUnderline {
-    /* position: absolute; */
     bottom: 0;
     left: 0;
     width: 100%;
-    height: .1rem;
-    /* background: #000; */
+    height: 0.10rem;
     opacity: 0.12;
     background: #000000 0% 0% no-repeat padding-box;
 }
 
 .up-arrow {
+    width: 1.2rem;
+    height: 2.4rem;
     margin-left: 2.4rem;
 }
 
@@ -508,9 +457,6 @@ body {
     display: grid;
     grid-gap: 2.4rem;
     grid-template-columns: 1fr 1fr;
-    /* grid-auto-columns: ; */
-    /* display: flex;
-    gap: 2.4rem; */
     justify-content: center;
     align-items: center;
     margin-top: 24px;
@@ -526,11 +472,8 @@ body {
 }
 
 .expirefont {
-
     padding: .4rem .7rem .2rem .5rem;
-
     font-weight: 500;
-
     font-family: "Museo Sans";
     text-align: left;
     font: normal normal normal 1.0rem/1.6rem Museo Sans 500;
@@ -543,16 +486,11 @@ body {
 
 .card {
     position: relative;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: row; */
     width: 47.6rem;
     height: 24.6rem;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: .2rem;
     opacity: 1;
-    /* margin: 1.25rem 1.2rem 1.25rem 1.2rem; */
 }
 
 
@@ -573,11 +511,7 @@ body {
     top: 0;
     left: 0;
     display: flex;
-    /* justify-content: space-between;   */
-    /* align-items: center; */
     flex-direction: row;
-    /* flex-grow: 1; */
-    /* margin-top: .4rem; */
 }
 
 .card-img {
@@ -585,7 +519,6 @@ body {
     height: 15.7rem;
     margin-top: 2.4rem;
     margin-left: 2.4rem;
-    /* UI Properties */
     background: transparent url('img/imageMask.png') 0% 0% no-repeat padding-box;
     border-radius: .2rem;
     opacity: 1;
@@ -606,7 +539,6 @@ body {
 .card-content1 {
     display: flex;
     margin-left: 1.6rem;
-    /* margin-top: 2.5rem; */
     flex-direction: column;
 }
 
@@ -622,7 +554,14 @@ body {
 
 
 .brightstar1 {
+    width: 2.6rem;
+    height: 2.6rem;
     filter: grayscale(100%);
+}
+
+.brightstar {
+    width: 2.6rem;
+    height: 2.6rem;
 }
 
 .card-heading1 {
@@ -641,11 +580,9 @@ body {
 .card-heading2 {
     width: 25.0rem;
     height: 4.1rem;
-    /* UI Properties */
     text-align: left;
     font-weight: bold;
     font-size: 1.6rem;
-    /* font: normal normal medium 1.6rem/2.0rem Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -654,11 +591,9 @@ body {
 .card-heading3 {
     width: 26.0rem;
     height: 4.3rem;
-    /* UI Properties */
     font-size: 1.6rem;
     text-align: left;
     font-weight: bold;
-    /* font: normal normal medium 1.6rem/2.0rem Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -670,7 +605,6 @@ body {
     text-align: left;
     font-weight: bold;
     font-size: 1.6rem;
-    /* font: normal normal medium 1.6rem/2.0rem Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -679,7 +613,6 @@ body {
 
 
 .type {
-    /* width: 41rem; */
     height: 1.5rem;
     text-align: left;
     font: normal normal medium 1.2rem/1.6rem Quicksand;
@@ -701,7 +634,6 @@ body {
 
 .grade {
     margin-left: .9rem;
-    /* width: 72rem; */
     font-size: 1.2rem;
     width: 4.8rem;
     height: 1.6rem;
@@ -725,12 +657,7 @@ body {
 }
 
 .course-details {
-    /* margin-top: 66.5rem; */
     display: flex;
-    /* justify-content: center; */
-    /* align-items: end; */
-    /* text-align: center; */
-    /* font: normal normal medium 14rem/18rem Quicksand; */
     letter-spacing: .0rem;
     color: #1f7a54;
     opacity: 1;
@@ -740,13 +667,10 @@ body {
 .course-lengthdetails {
     display: flex;
     margin-top: .7rem;
-    /* justify-content: center; */
-    /* align-items: center;  */
     font-size: 1.2rem;
 }
 
 .count {
-    /* width: 12rem; */
     height: 1.5rem;
     text-align: left;
     font-size: 1.2rem;
@@ -799,7 +723,6 @@ body {
     height: 2.7rem;
     margin-top: 1.6rem;
     padding-bottom: .5rem;
-    /* margin-top: 23rem; */
     position: relative;
 }
 
@@ -815,7 +738,6 @@ body {
     margin-right: 11.5rem;
     background-color: transparent;
     border: none;
-    /* width: 139rem;   */
     height: 2.0rem;
     text-align: left;
     font: normal normal medium 1.6rem/2.0rem Quicksand;
@@ -827,14 +749,11 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /* Add your custom arrow */
+    background-size: 3rem 2.5rem;
     background-image: url('./quantum screen assets/quantum screen assets/icons/arrow-down.svg');
-    /* Replace with your custom arrow image */
     background-position: right center;
     background-repeat: no-repeat;
-    /* Add padding to ensure space for the custom arrow */
     padding-right: 2.0rem;
-    /* Adjust as needed based on the size of your custom arrow */
 }
 
 .customInput1:focus,
@@ -847,17 +766,14 @@ body {
     width: 100%;
     height: 2.0rem;
     font-size: 1.6rem;
-    /* font-weight: bold; */
     padding: 0;
     margin-bottom: .5rem;
     margin-left: 0;
     margin-right: 11.5rem;
     background-color: transparent;
     border: none;
-    /* width: 139rem;   */
     height: 2.0rem;
     text-align: left;
-    /* font: normal normal medium 16rem/20rem Quicksand; */
     letter-spacing: 0rem;
     color: #222222;
     opacity: 1;
@@ -866,14 +782,11 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /* Add your custom arrow */
     background-image: url('./quantum screen assets/quantum screen assets/icons/arrow-down.svg');
-    /* Replace with your custom arrow image */
+    background-size: 3rem 2.5rem;
     background-position: right center;
     background-repeat: no-repeat;
-    /* Add padding to ensure space for the custom arrow */
     padding-right: 2.0rem;
-    /* Adjust as needed based on the size of your custom arrow */
 }
 
 .customInput2:focus,
@@ -892,7 +805,6 @@ body {
 }
 
 .student {
-    /* width: 68rem; */
     height: 1.5rem;
     text-align: left;
     font: normal normal medium 1.2rem/1.6rem Quicksand;
@@ -904,7 +816,6 @@ body {
 }
 
 .date {
-    /* width: 150rem; */
     font-size: 1.2rem;
     font-weight: 400;
     height: 1.5rem;
@@ -918,17 +829,13 @@ body {
 
 .fourbtn-container {
     display: flex;
-    /* justify-content: space-evenly; */
-    /* width: 428rem; */
     height: 4.0rem;
     margin-left: 4.8rem;
     margin-right: 4.8rem;
-    /* margin-top: 16rem; */
     margin-bottom: .9rem;
 }
 
 .transparent {
-    /* accent-color: #; */
     opacity: 40%;
 }
 
@@ -950,7 +857,6 @@ body {
     margin-right: 10.1rem;
     padding-top: 1.8rem;
     height: 2.0rem;
-    /* background: #1F7A54 0% 0% no-repeat padding-box; */
     opacity: 1;
 }
 
@@ -963,17 +869,12 @@ body {
     height: 2.0rem;
     margin-right: 10.1rem;
     padding-top: 1.8rem;
-    /* background: transparent url('img/evaluate.png') 0% 0% no-repeat padding-box; */
-    /* opacity: 1; */
 }
 
 .reporticon {
     width: 2.2rem;
     padding-top: 1.6rem;
     height: 2.8rem;
-
-    /* margin-right: 101rem; */
-
     text-align: left;
     font-size: 2 .4rem;
     font: normal normal normal 2.4rem/2.9rem Material-Design-Iconic-Font;
@@ -990,13 +891,9 @@ body {
     margin-right: 2.4rem;
     margin-top: 1.6rem;
     height: .1rem;
-    /* background: #000; */
     opacity: 0.12;
     background: #000000 0% 0% no-repeat padding-box;
 }
-
-
-
 
 @media screen and (max-width: 950px) {
     .navbar-options {
@@ -1017,22 +914,9 @@ body {
     }
 
     .container {
-        /* Example adjustment */
         grid-template-rows: auto;
     }
 }
-
-/* @media screen and (max-width: 900px) {
-    html {
-        font-size: 54.223%;
-    }
-}
-
-@media screen and (max-width: 950px) {
-    html {
-        font-size: 58.5%;
-    }
-} */
 
 @media screen and (min-width:950px) {
     html {
@@ -1045,10 +929,6 @@ body {
 
     }
 
-    /* .navbar {
-        justify-content: space-between;
-    } */
-
     .hamburger-icon {
         display: none;
         visibility: hidden;
@@ -1066,133 +946,68 @@ body {
 
 }
 
-/* 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width:1023px) {
     html {
-        font-size: 68%;
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 1110px) {
-    html {
-        font-size: 75%;
+        font-size: 55.5%;
     }
 }
-
-@media screen and (max-width: 1225px) {
-    html {
-        font-size: 82%;
-    }
-}
-
-@media screen and (max-width: 1335px) {
-    html {
-        font-size: 89%;
-        width: 100%;
-    }
-} */
-
 
 @media screen and (max-width:1023px) {
-    html {
-        font-size: 62.5%;
-    }
-
     .card-container {
         grid-template-columns: 1fr;
     }
 }
 
-@media screen and (min-width:1560px) {
-
-
+@media screen and (min-width:1660px) {
     .card-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (min-width:2000px) {
-
-
     .card-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
-/* @media screen and (min-width:1050px) {
-    html {
-        font-size: 63.5%;
-    }
-} */
-
-/* @media screen and (min-width:1100px) {
-    html {
-        font-size: 65.5%;
-    }
-} */
-
-/* @media screen and (max-width:1150px) {
-    html {
-        font-size: 70.5%;
-    }
-} */
-
-/* @media screen and (max-width:1200px) {
-    html {
-        font-size: 75.5%;
-    }
-} */
-
 @media screen and (max-width: 890px) {
     .html {
         font-size: 65%;
     }
+}
 
-
+@media only screen and (max-width: 620px) {
+    html {
+        font-size: 40%;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     html {
-        font-size: 40%;
+        font-size: 35%;
     }
-
-
 }
 
 @media only screen and (max-width: 350px) {
     html {
         font-size: 28%;
     }
-
-
-
 }
 
-@media only screen and (max-width: 250px) {
+/* @media only screen and (max-width: 280px) {
     html {
         font-size: 25%;
     }
-
-
-
 }
 
 @media only screen and (max-width: 170px) {
     html {
-        font-size: 15%;
+        font-size: 10%;
     }
-
-
-
 }
 
 @media only screen and (max-width: 110px) {
     html {
-        font-size: 10%;
+        font-size: 5%;
     }
-
-
-
-}
+} */
