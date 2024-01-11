@@ -430,12 +430,13 @@ body {
 }
 
 .card-container {
-  display: flex;
-  gap: 24px;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr;
   margin-top: 24px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
 }
 
 .expired {
