@@ -1,0 +1,207 @@
+.content {
+  padding: 0 3.2rem;
+  .card-head {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    height: 3rem;
+    .heading_box {
+      @include fontstyle($mainfont, 2.4rem, 600, #222222, 1);
+      padding-left: 7.7rem;
+      letter-spacing: 0rem;
+    }
+    #back {
+      width: 1.7rem;
+      height: 2.6rem;
+      text-align: left;
+      @include fontstyle($mainfont, 2.6rem, 300, #1f7a54, 1);
+      letter-spacing: 0.065rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    .school-type {
+      @include fontstyle($mainfont, 1.6rem, 500, #333333, 1);
+      @include flexcontainer();
+      justify-content: left;
+      align-items: center;
+      text-align: left;
+      letter-spacing: 0rem;
+      margin-top: 3.2rem;
+      height: 2rem;
+      padding: 0;
+      .radio {
+        margin: 0;
+        padding: 0;
+        width: 2rem;
+        height: 2.4rem;
+        margin-right: 0.8rem;
+        text-align: left;
+        font: normal normal normal 2.4rem/1.7rem "Material-Design-Iconic-Font";
+        letter-spacing: 0rem;
+        accent-color: #1f7a54;
+        opacity: 1;
+      }
+      .label {
+        margin: 0;
+        height: 2rem;
+        text-align: left;
+        @include fontstyle($mainfont, 1.6rem, 500, #333333, 1);
+        letter-spacing: 0rem;
+      }
+      .label1 {
+        padding-right: 3.2rem;
+        width: 5.3rem;
+        height: 2rem;
+      }
+
+      .label2 {
+        width: 17rem;
+      }
+    }
+  }
+  .inputContainer {
+    height: 4.5rem;
+    margin-top: 2.3rem;
+    position: relative;
+  }
+  .inputLabel {
+    width: 3.4rem;
+    height: 1.5rem;
+    @include fontstyle($mainfont, 1.2rem, bold, #a2a2a2, 1);
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+    letter-spacing: 0rem;
+  }
+  .arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../quantum screen assets/quantum screen assets/icons/arrow-down.svg");
+    background-size: 3rem 2.5rem;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 2rem;
+  }
+  .customInput {
+    padding-bottom: 0.5rem;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.6rem;
+    padding: 0;
+    margin-left: 0;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    color: #222222;
+    opacity: 1;
+    letter-spacing: 0rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-color: #000;
+    }
+    .option {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+  .inputUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #000;
+    opacity: 0.12;
+    background: #000000 0% 0% no-repeat padding-box;
+  }
+  .space-district {
+    margin-top: 3.6rem;
+  }
+
+  // .dis {
+  //   width: 4.4rem;
+  // }
+  .inputContainer1 {
+    height: 2.5rem;
+    margin-top: 5.6rem;
+    position: relative;
+    .u1 {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .forgot {
+    @include fontstyle($mainfont, 1.4rem, 600, #1f7a54, 1);
+    margin-top: 0.5rem;
+    text-align: right;
+    letter-spacing: 0rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 1.8rem;
+    justify-self: end;
+  }
+
+  .remember {
+    @include fontstyle($mainfont, 1.6rem, bold, #222222, 1);
+    display: flex;
+    margin-top: 2.4rem;
+    height: 2.4rem;
+    align-items: center;
+    text-align: left;
+    letter-spacing: 0rem;
+    accent-color: #1f7a54;
+  }
+
+  .inputContainer2 {
+    height: 2.5rem;
+    margin-top: 3.3rem;
+    position: relative;
+  }
+
+  .showPasswordBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-items: center;
+    float: right;
+    width: 2.2rem;
+    height: 1.5rem;
+    padding: 0rem;
+    margin: 0;
+  }
+
+  .passwordWrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .showPassword {
+    width: 2.2rem;
+    height: 2rem;
+    padding: 0rem;
+    margin: 0;
+  }
+
+  .rem-check {
+    height: 2.4rem;
+    align-items: center;
+    width: 1.8rem;
+    margin: 0;
+    margin-right: 0.5rem;
+    text-align: left;
+    font: normal normal normal 2.4rem/1.7rem Material-Design-Iconic-Font;
+    letter-spacing: 0rem;
+    color: #1f7a54;
+    opacity: 1;
+  }
+}

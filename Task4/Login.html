@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <link rel="stylesheet" href="./login.css" /> -->
   <link rel="stylesheet" href="./login2.css" />
+  <!-- <link rel="stylesheet" href="./SCSS/style.css" /> -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
@@ -46,17 +48,10 @@
             <input type="radio" class="radio" name="school-type" value="independent" />
             <p class="label label2">Independent school</p>
           </label>
-          <!-- <select class="state" id="state" name="state">
-            <option value="" disabled selected>Select State</option>
-            
-            <option value="alabama">Alabama</option>
-        </select> -->
-
-          <!-- Similar dropdown for district -->
 
           <div class="inputContainer">
             <label class="inputLabel">State*</label>
-            <select required="true" class="customInput" id="ci1" name="state">
+            <select required="true" class="customInput arrow" id="ci1" name="state">
               <option class="option" value="" disabled selected>Select your state</option>
               <option class="option" value="Alabama" selected>Alabama</option>
               <option value="Alaska" class="option">Alaska</option>
@@ -69,7 +64,7 @@
 
           <div class="inputContainer space-district">
             <label class="inputLabel dis">District*</label>
-            <select required="true" class="customInput" id="ci2" name="district">
+            <select required="true" class="customInput arrow" id="ci2" name="district">
               <option value="" disabled selected>Select your district</option>
               <option value="District 1" selected>Alabama School District</option>
               <option value="District 2">District 2</option>
