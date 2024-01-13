@@ -994,13 +994,13 @@ body {
     }
 }
 
-/* @media only screen and (max-width: 280px) {
+@media only screen and (max-width: 280px) {
     html {
-        font-size: 25%;
+        font-size: 19%;
     }
 }
 
-@media only screen and (max-width: 170px) {
+@media only screen and (max-width: 190px) {
     html {
         font-size: 10%;
     }
@@ -1010,4 +1010,4 @@ body {
     html {
         font-size: 5%;
     }
-} */
+}
