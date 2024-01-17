@@ -882,16 +882,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (min-width: 1660px) {
-  .content .card-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .content .card-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
 @media screen and (max-width: 890px) {
   .html {
     font-size: 65%;
