@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "outDir": "./", // Output directory for compiled JavaScript files
+    "rootDir": "./TypeScript", // Source directory containing TypeScript files
+    // ... other options
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./Typescript/*.ts"],
+  "exclude": ["node_modules"]
+}
