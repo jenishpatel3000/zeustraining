@@ -1,0 +1,156 @@
+.content {
+  @include flexcontainer(center);
+  flex-direction: column;
+  margin: 2.4rem;
+
+  .green-rectangle {
+    height: 6.4rem;
+    width: 100%;
+    background: #8ddc97 0% 0% no-repeat padding-box;
+    border-radius: 0.2rem;
+    opacity: 1;
+    .radio-inputs {
+      height: 6.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .radio {
+        flex: 1 1 auto;
+        text-align: center;
+        .option {
+          display: none;
+        }
+        .name {
+          cursor: pointer;
+          @include flexcontainer(center);
+          height: 6rem;
+          color: rgba(51, 65, 85, 1);
+          transition: all 0.15s ease-in-out;
+        }
+        .option-container {
+          @include flexcontainer(center);
+          flex-direction: row;
+          width: 11.4rem;
+          height: 3.2rem;
+
+          .logo1 {
+            width: 2.6rem;
+            height: 4rem;
+          }
+
+          .logo2 {
+            width: 2.9rem;
+            height: 3.2rem;
+          }
+
+          .count1 {
+            width: 1.7rem;
+            height: 3rem;
+            text-align: left;
+            @include fontstyle($mainfont, 2.4rem, bold, #222222, 1);
+            letter-spacing: 0rem;
+            margin-left: 1.6rem;
+            margin-right: 0.2rem;
+          }
+
+          .option-name1 {
+            height: 2rem;
+            text-align: left;
+            @include fontstyle($mainfont, 1.6rem, bold, #222222, 1);
+            letter-spacing: 0rem;
+          }
+        }
+        input:checked + .name {
+          border-bottom: 0.4rem solid #222222;
+        }
+        input:checked + .option-container {
+          border-bottom: 0.4rem solid #222222;
+        }
+      }
+    }
+  }
+  .filter-container {
+    @include flexcontainer(space-between);
+    width: 100%;
+    height: 2.8rem;
+    flex-direction: row;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+    .left-content {
+      width: 13.6rem;
+      height: 1.5rem;
+      text-align: left;
+      font-size: 1.2rem;
+      letter-spacing: 0rem;
+      color: #686868;
+      opacity: 1;
+    }
+    .right-content {
+      @include flexcontainer(center);
+      flex-direction: row;
+      .inputLabel {
+        width: 4.7rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
+        margin-right: 0.6rem;
+        padding-left: 0;
+        margin-left: 0;
+        font-family: "Quicksand";
+        text-align: left;
+        letter-spacing: 0rem;
+        color: #666666;
+        opacity: 1;
+      }
+      .inputContainer {
+        height: 2rem;
+        padding-bottom: 0.5rem;
+        .customInput {
+          padding-bottom: 0.5rem;
+          width: 100%;
+          height: 2rem;
+          @include fontstyle($mainfont, 1.6rem, bold, #333333, 1);
+          padding: 0;
+          margin-left: 0;
+          margin-right: 5.4rem;
+          background-color: transparent;
+          border: none;
+          text-align: left;
+          font-family: "Quicksand", "Helvetica Neue", sans-serif;
+          letter-spacing: 0rem;
+          outline: none;
+          transition: border-color 0.3s ease;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-image: url("./quantum screen assets/quantum screen assets/icons/arrow-down.svg");
+          background-size: 3rem 2.5rem;
+          background-position: right center;
+          background-repeat: no-repeat;
+          padding-right: 2rem;
+          &:focus,
+          &:not(:placeholder-shown) {
+            border-color: #000;
+          }
+          .option {
+            padding-left: 0;
+            margin-left: 0;
+          }
+        }
+      }
+      .up-arrow {
+        width: 1.2rem;
+        height: 2.4rem;
+        margin-left: 2.4rem;
+      }
+    }
+  }
+  .inputUnderline {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    opacity: 0.12;
+    background: #000000 0% 0% no-repeat padding-box;
+  }
+  @import "./_card.scss";
+}
