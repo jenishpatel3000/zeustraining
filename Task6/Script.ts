@@ -1,9 +1,16 @@
-import cardData from "./cardData.json";
-
-function createCard(course: any) {
+fetch("./cardData.json")
+  .then((response) => response.json())
+  .then((cardData) => {
+    // console.log(cardData);
+    cardData.forEach((course) => {
+      createCard(course);
+    });
+  })
+  .catch((error) => console.error("Error fetching cardData:", error));
+function createCard(course): void {
   console.log(course);
-  const cardContainer: HTMLDivElement | null =
-    document.querySelector(".card-container");
+  const cardContainer = document.getElementById("card-container");
+  console.log(cardContainer + "this is card container");
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("card");
 
@@ -12,7 +19,7 @@ function createCard(course: any) {
   cardContent.innerHTML = `
   
                             <img class="card-img img"
-                                src=${course.image}
+                                src="${course.image}"
 
                                 alt="course image" />
                             <div class="card-content">
@@ -32,7 +39,7 @@ function createCard(course: any) {
                                 <div class="course-lengthdetails">
                                     <div class="unit-detail">
                                         <span class="count">
-                                            ${course.unitDetails}
+                                            ${course.unitCount}
                                         </span>
                                         <span class="unit">
                                             Units
@@ -40,7 +47,7 @@ function createCard(course: any) {
                                     </div>
                                     <div class="lessons-detail">
                                         <span class="count">
-                                             ${course.lessonsDetails}
+                                             ${course.lessonsCount}
                                         </span>
                                         <span class="lessons">
                                             Lessons
@@ -48,7 +55,7 @@ function createCard(course: any) {
                                     </div>
                                     <div class="topics-detail">
                                         <span class="count">
-                                             ${course.topicsDetails}
+                                             ${course.topicsCount}
                                         </span>
                                         <span class="topics">
                                             Topics
@@ -58,11 +65,11 @@ function createCard(course: any) {
 
                                 <div class="inputContainer1">
                                     <select required="true" class="customInput customInput1" id="ci1" name="state">
-                                    <option class="option" value="Course Name" selected> ${course.Classes[0]}
+                                    <option class="option" value="Course Name" selected> ${course.classes[0]}
                                     </option>
-                                        <option class="option" value="" disabled>${course.Classes[1]}</option>
-                                        <option value="Date" class="option">${course.Classes[2]}</option>
-                                        <option value="Date" class="option">${course.Classes[3]}</option>
+                                        <option class="option" value="" disabled>${course.classes[1]}</option>
+                                        <option value="Date" class="option">${course.classes[2]}</option>
+                                        <option value="Date" class="option">${course.classes[3]}</option>
 
                                         <!-- Add more options as needed -->
                                     </select>
@@ -84,14 +91,27 @@ function createCard(course: any) {
                                     src="./quantum screen assets/quantum screen assets/icons/favourite.svg"
                                     alt="star icon" />
                             </div>
+                            
   `;
+  const underline = document.createElement("div");
+  underline.classList.add("inputUnderlinecard");
 
+  const btncontainer = document.createElement("div");
+  btncontainer.classList.add("fourbtn-container");
+  btncontainer.innerHTML = `
+                                <img class="showicon" alt="show icon"
+                                src="./quantum screen assets/quantum screen assets/icons/preview.svg"></img>
+                            <img class="calendericon" alt="calender icon"
+                                src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
+                            <img class="gradeicon" alt="grade icon"
+                                src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
+                            <img class="reporticon" alt="report icon"
+                                src="./quantum screen assets/quantum screen assets/icons/reports.svg"></img>
+    `;
   cardDiv.appendChild(cardContent);
+  cardDiv.appendChild(underline);
+  cardDiv.appendChild(btncontainer);
   if (cardContainer) {
-    (cardContainer as HTMLDivElement).appendChild(cardDiv);
+    cardContainer.appendChild(cardDiv);
   }
 }
-
-cardData.forEach((course) => {
-  createCard(course);
-});

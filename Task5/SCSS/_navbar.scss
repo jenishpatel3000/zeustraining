@@ -30,12 +30,13 @@
           display: none;
         }
         .option-name {
+          position: relative;
           cursor: pointer;
           @include flexcontainer(center);
           padding: 0 0.4rem;
-          height: 5.2rem;
+          height: 5.6rem;
           margin-right: 3.2rem;
-          @include fontstyle($mainfont, 1.4rem, bold, #3fd28b, 1);
+          @include fontstyle($mainfont, 1.4rem, 500, #3fd28b, 1);
           letter-spacing: 0px;
           transition: all 0.15s ease-in-out;
           .option1 {
@@ -43,11 +44,26 @@
             text-align: center;
             opacity: 1;
           }
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            // width: 9.4rem;
+            height: 0.45rem;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            transform-origin: center bottom;
+            transform: scaleY(0);
+            transition: transform 0.15s ease-in-out;
+          }
         }
 
         input:checked + .option-name {
-          border-bottom: 0.45rem solid #fff;
           color: #fff;
+          &:after {
+            transform: scaleY(1);
+          }
         }
       }
     }
@@ -72,10 +88,10 @@
     }
 
     .notify-img {
-      width: 2.1rem;
+      width: 2.8rem;
       margin: 0;
       padding: 0;
-      height: 2.4rem;
+      height: 2.8rem;
       text-align: left;
       letter-spacing: -0.06rem;
       color: #3fd28b;
@@ -83,17 +99,17 @@
     }
 
     .announcement-img {
-      width: 2rem;
-      height: 2rem;
+      width: 2.4rem;
+      height: 2.8rem;
     }
 
     .account-img {
-      width: 3.2rem;
-      height: 3.2rem;
+      width: 3.5rem;
+      height: 3.5rem;
     }
     .hamburger-icon {
-      width: 3rem;
-      height: 2.6rem;
+      width: 3.5rem;
+      height: 3.5rem;
       display: none;
       visibility: hidden;
     }
