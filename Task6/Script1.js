@@ -27,13 +27,13 @@ function createCard(course) {
 
                                 alt="course image" />
                                 ${
-                                  course.courseId === 4
+                                  course.expire === true
                                     ? `  <div class="card-content1">`
                                     : `  <div class="card-content">`
                                 }
-                                <div class="card-heading${course.courseId}">${
-    course.name
-  }</div>
+                                <div class="card-heading${course.courseId}">
+                                ${course.name}
+                                </div>
                                 <div class="course-details">
                                     <span class="type">
                                         ${course.type}
@@ -105,7 +105,7 @@ function createCard(course) {
                                 </div>
                             </div>
                             ${
-                              course.courseId === 4
+                              course.brightstar === false
                                 ? `  <div class="star1">
                                 <img class="brightstar1"
                                     src="./quantum screen assets/quantum screen assets/icons/favourite.svg"
@@ -120,38 +120,30 @@ function createCard(course) {
                             
                             
   `;
+
   const underline = document.createElement("div");
   underline.classList.add("inputUnderlinecard");
-  console.log("screen.width:", screen.width);
+
   const btncontainer = document.createElement("div");
   btncontainer.classList.add("fourbtn-container");
-  // Function to update UI based on screen width
-  function updateUI() {
-    btncontainer.innerHTML = `  
+
+  btncontainer.innerHTML = `  
     <img class="showicon" alt="show icon" src="./quantum screen assets/quantum screen assets/icons/preview.svg"></img>
-        ${
-          (course.courseId === 3 || course.courseId === 2) &&
-          window.innerWidth >= 1023
-            ? `
-                <img class="calendericon disabled" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
-                <img class="gradeicon disabled" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
+    ${
+      course.courseId === 3 || course.courseId === 2
+        ? `
+                <img class="calendericon opacity" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
+                <img class="gradeicon opacity" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
             `
-            : `
+        : `
                 <img class="calendericon" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
                 <img class="gradeicon" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
             `
-        }
+    }
         <img class="reporticon" alt="report icon" src="./quantum screen assets/quantum screen assets/icons/reports.svg"></img>
     `;
-  }
 
-  // Initial update
-  updateUI();
-
-  // Event listener for window resize
-  window.addEventListener("resize", updateUI);
-
-  if (course.courseId === 4) {
+  if (course.expire === true) {
     cardDiv.appendChild(courseExpired);
   }
   cardDiv.appendChild(cardContent);

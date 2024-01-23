@@ -31,10 +31,15 @@ html {
   text-align: center;
   margin-top: auto;
 }
-.disabled {
-  opacity: 0.4;
+.opacity {
+  opacity: 1;
 }
-
+.blueline1 {
+  width: auto;
+  height: 0.2rem;
+  background: #31b9e4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
 body {
   min-height: 100vh;
   display: flex;

@@ -8,6 +8,13 @@
     display: block;
     visibility: visible;
     margin-right: 2.4rem;
+    &:hover {
+      filter: brightness(0) invert(1);
+    }
+  }
+  .blueline1 {
+    display: block;
+    visibility: visible;
   }
 
   .navbar .buttons-container .buttonend {
@@ -20,15 +27,15 @@
 }
 
 @media screen and (min-width: 950px) {
-  html {
-    font-size: 58.5%;
-  }
-
   .navbar .navbar-options {
     display: block;
     visibility: visible;
   }
 
+  .blueline1 {
+    display: none;
+    visibility: hidden;
+  }
   .navbar .buttons-container .hamburger-icon {
     display: none;
     visibility: hidden;
@@ -44,18 +51,16 @@
   }
 }
 
-@media screen and (min-width: 1023px) {
-  html {
-    font-size: 55.5%;
-  }
-}
-
 @media screen and (max-width: 1023px) {
   .content #card-container {
     grid-template-columns: 1fr;
   }
 }
-
+@media screen and (min-width: 1023px) {
+  .opacity {
+    opacity: 0.4;
+  }
+}
 // @media screen and (min-width: 1660px) {
 //   .content .card-container {
 //     grid-template-columns: 1fr 1fr 1fr;
@@ -94,18 +99,23 @@
 
 @media only screen and (max-width: 280px) {
   html {
-    font-size: 20%;
+    font-size: 23%;
   }
 }
 
 @media only screen and (max-width: 190px) {
   html {
-    font-size: 18%;
+    font-size: 20%;
+  }
+}
+@media only screen and (max-width: 150px) {
+  html {
+    font-size: 17%;
   }
 }
 
 @media only screen and (max-width: 110px) {
   html {
-    font-size: 5%;
+    font-size: 10%;
   }
 }

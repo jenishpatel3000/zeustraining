@@ -16,8 +16,15 @@ html {
   margin-top: auto;
 }
 
-.disabled {
-  opacity: 0.4;
+.opacity {
+  opacity: 1;
+}
+
+.blueline1 {
+  width: auto;
+  height: 0.2rem;
+  background: #31b9e4 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
 body {
@@ -852,17 +859,25 @@ body {
     visibility: visible;
     margin-right: 2.4rem;
   }
+  .navbar .buttons-container .hamburger-icon:hover {
+    filter: brightness(0) invert(1);
+  }
+  .blueline1 {
+    display: block;
+    visibility: visible;
+  }
   .navbar .buttons-container .buttonend {
     margin-right: 3.2rem;
   }
 }
 @media screen and (min-width: 950px) {
-  html {
-    font-size: 58.5%;
-  }
   .navbar .navbar-options {
     display: block;
     visibility: visible;
+  }
+  .blueline1 {
+    display: none;
+    visibility: hidden;
   }
   .navbar .buttons-container .hamburger-icon {
     display: none;
@@ -876,14 +891,14 @@ body {
     grid-template-rows: auto;
   }
 }
-@media screen and (min-width: 1023px) {
-  html {
-    font-size: 55.5%;
-  }
-}
 @media screen and (max-width: 1023px) {
   .content #card-container {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .opacity {
+    opacity: 0.4;
   }
 }
 @media screen and (max-width: 890px) {
@@ -908,16 +923,21 @@ body {
 }
 @media only screen and (max-width: 280px) {
   html {
-    font-size: 20%;
+    font-size: 23%;
   }
 }
 @media only screen and (max-width: 190px) {
   html {
-    font-size: 18%;
+    font-size: 20%;
+  }
+}
+@media only screen and (max-width: 150px) {
+  html {
+    font-size: 17%;
   }
 }
 @media only screen and (max-width: 110px) {
   html {
-    font-size: 5%;
+    font-size: 10%;
   }
 }/*# sourceMappingURL=style.css.map */

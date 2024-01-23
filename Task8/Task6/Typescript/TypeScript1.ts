@@ -1,20 +1,15 @@
-import {
-  cardDataIf1,
-  cardDataIf2,
-  menudataif1,
-  menudataif2,
-} from "./interface";
+import { cardDataIf1, menudataif1, menudataif2 } from "./interface";
 fetch("./cardData.json")
   .then((response: Response) => response.json())
-  .then((cardData: cardDataIf1[] | cardDataIf2[]) => {
+  .then((cardData: cardDataIf1[]) => {
     // console.log(cardData);
-    cardData.forEach((course: cardDataIf1 | cardDataIf2) => {
+    cardData.forEach((course: cardDataIf1) => {
       createCard(course);
     });
   })
   .catch((error: any) => console.error("Error fetching cardData:", error));
 
-function createCard(course: cardDataIf1 | cardDataIf2) {
+function createCard(course: cardDataIf1) {
   const cardContainer: HTMLElement | null =
     document.getElementById("card-container");
   const cardDiv: HTMLElement | null = document.createElement("div");
@@ -32,7 +27,7 @@ function createCard(course: cardDataIf1 | cardDataIf2) {
 
                                 alt="course image" />
                                 ${
-                                  course.courseId === 4
+                                  course.expire === true
                                     ? `  <div class="card-content1">`
                                     : `  <div class="card-content">`
                                 }
@@ -110,7 +105,7 @@ function createCard(course: cardDataIf1 | cardDataIf2) {
                                 </div>
                             </div>
                             ${
-                              course.courseId === 4
+                              course.brightstar === false
                                 ? `  <div class="star1">
                                 <img class="brightstar1"
                                     src="./quantum screen assets/quantum screen assets/icons/favourite.svg"
@@ -127,21 +122,17 @@ function createCard(course: cardDataIf1 | cardDataIf2) {
   `;
   const underline: HTMLElement | null = document.createElement("div");
   underline.classList.add("inputUnderlinecard");
-  console.log("screen.width:", screen.width);
   const btncontainer: HTMLElement | null = document.createElement("div");
   btncontainer.classList.add("fourbtn-container");
-  // Function to update UI based on screen width
-  const blueline: HTMLElement | null = document.querySelector(".blueline1");
-  function updateUI() {
-    if (btncontainer) {
-      btncontainer.innerHTML = `  
+
+  if (btncontainer) {
+    btncontainer.innerHTML = `  
       <img class="showicon" alt="show icon" src="./quantum screen assets/quantum screen assets/icons/preview.svg"></img>
           ${
-            (course.courseId === 3 || course.courseId === 2) &&
-            window.innerWidth >= 1023
+            course.courseId === 3 || course.courseId === 2
               ? `
-                  <img class="calendericon disabled" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
-                  <img class="gradeicon disabled" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
+                  <img class="calendericon opacity" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
+                  <img class="gradeicon opacity" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
               `
               : `
                   <img class="calendericon" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
@@ -150,20 +141,9 @@ function createCard(course: cardDataIf1 | cardDataIf2) {
           }
           <img class="reporticon" alt="report icon" src="./quantum screen assets/quantum screen assets/icons/reports.svg"></img>
       `;
-    }
-    if (blueline && window.innerWidth > 950) {
-      blueline.style.display = "none";
-      blueline.style.visibility = "hidden";
-    } else if (blueline && window.innerWidth <= 950) {
-      blueline.style.display = "block";
-      blueline.style.visibility = "visible";
-    }
   }
 
-  updateUI();
-  window.addEventListener("resize", updateUI);
-
-  if (course.courseId === 4) {
+  if (course.expire === true) {
     cardDiv.appendChild(courseExpired);
   }
   cardDiv.appendChild(cardContent);

@@ -20,9 +20,9 @@
 }
 
 @media screen and (min-width: 950px) {
-  html {
-    font-size: 58.5%;
-  }
+  // html {
+  //   font-size: 58.5%;
+  // }
 
   .navbar .navbar-options {
     display: block;
@@ -44,15 +44,18 @@
   }
 }
 
-@media screen and (min-width: 1023px) {
-  html {
-    font-size: 55.5%;
-  }
-}
+// @media screen and (min-width: 1023px) {
+//   html {
+//     font-size: 55.5%;
+//   }
+// }
 
 @media screen and (max-width: 1023px) {
   .content .card-container {
     grid-template-columns: 1fr;
+    .card {
+      max-width: 57.1rem;
+    }
   }
 }
 
@@ -92,18 +95,23 @@
   }
 }
 
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 245px) {
   html {
-    font-size: 19%;
+    font-size: 23%;
   }
 }
 
-@media only screen and (max-width: 190px) {
+@media only screen and (max-width: 200px) {
   html {
-    font-size: 10%;
+    font-size: 20%;
   }
 }
 
+@media only screen and (max-width: 160px) {
+  html {
+    font-size: 13%;
+  }
+}
 @media only screen and (max-width: 110px) {
   html {
     font-size: 5%;
