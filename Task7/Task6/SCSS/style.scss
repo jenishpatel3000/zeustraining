@@ -45,6 +45,12 @@ body {
   background-color: #eeeeee;
   overflow-x: hidden;
 }
+.blueline1 {
+  width: auto;
+  height: 0.2rem;
+  background: #31b9e4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
 @import "./_navbar.scss";
 @import "./_content.scss";
 @import "./_footer.scss";

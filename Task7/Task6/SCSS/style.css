@@ -31,6 +31,13 @@ body {
   overflow-x: hidden;
 }
 
+.blueline1 {
+  width: auto;
+  height: 0.2rem;
+  background: #31b9e4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -139,13 +146,22 @@ body {
   color: #3fd28b;
   opacity: 1;
 }
+.navbar .buttons-container .notify-img:hover {
+  filter: brightness(0) invert(1);
+}
 .navbar .buttons-container .announcement-img {
   width: 2.4rem;
   height: 2.8rem;
 }
+.navbar .buttons-container .announcement-img:hover {
+  filter: brightness(0) invert(1);
+}
 .navbar .buttons-container .account-img {
   width: 3.5rem;
   height: 3.5rem;
+}
+.navbar .buttons-container .account-img:hover {
+  filter: brightness(0) invert(1);
 }
 .navbar .buttons-container .hamburger-icon {
   width: 3.5rem;
@@ -851,6 +867,9 @@ body {
     display: block;
     visibility: visible;
     margin-right: 2.4rem;
+  }
+  .navbar .buttons-container .hamburger-icon:hover {
+    filter: brightness(0) invert(1);
   }
   .navbar .buttons-container .buttonend {
     margin-right: 3.2rem;

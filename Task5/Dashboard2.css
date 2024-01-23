@@ -151,6 +151,13 @@ body {
     height: 3.2rem;
 }
 
+.blueline1 {
+    width: auto;
+    height: .2rem;
+    background: #31b9e4 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
 /* ---------------------footer------------------- */
 .about {
     width: 4.0rem;

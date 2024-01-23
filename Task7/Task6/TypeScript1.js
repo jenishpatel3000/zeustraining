@@ -122,6 +122,7 @@ function createCard(course) {
   const btncontainer = document.createElement("div");
   btncontainer.classList.add("fourbtn-container");
   // Function to update UI based on screen width
+  const blueline = document.querySelector(".blueline1");
   function updateUI() {
     if (btncontainer) {
       btncontainer.innerHTML = `  
@@ -140,6 +141,13 @@ function createCard(course) {
           }
           <img class="reporticon" alt="report icon" src="./quantum screen assets/quantum screen assets/icons/reports.svg"></img>
       `;
+    }
+    if (blueline && window.innerWidth >= 1023) {
+      blueline.style.display = "none";
+      blueline.style.visibility = "hidden";
+    } else if (blueline && window.innerWidth < 1023) {
+      blueline.style.display = "block";
+      blueline.style.visibility = "visible";
     }
   }
   updateUI();

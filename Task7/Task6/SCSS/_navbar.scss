@@ -96,16 +96,25 @@
       letter-spacing: -0.06rem;
       color: #3fd28b;
       opacity: 1;
+      &:hover {
+        filter: brightness(0) invert(1);
+      }
     }
 
     .announcement-img {
       width: 2.4rem;
       height: 2.8rem;
+      &:hover {
+        filter: brightness(0) invert(1);
+      }
     }
 
     .account-img {
       width: 3.5rem;
       height: 3.5rem;
+      &:hover {
+        filter: brightness(0) invert(1);
+      }
     }
     .hamburger-icon {
       width: 3.5rem;
