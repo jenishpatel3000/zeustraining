@@ -1,5 +1,6 @@
 .content {
   padding: 0 3.2rem;
+  position: relative;
   .card-head {
     display: flex;
     align-items: center;
@@ -141,19 +142,21 @@
 
   .forgot {
     @include fontstyle($mainfont, 1.4rem, 600, #1f7a54, 1);
+    position: relative;
+    left: 27.6rem;
     margin-top: 0.5rem;
     text-align: right;
     letter-spacing: 0rem;
     text-decoration: none;
     text-transform: uppercase;
     height: 1.8rem;
-    justify-self: end;
+    width: 14.8rem;
   }
 
   .remember {
     @include fontstyle($mainfont, 1.6rem, bold, #222222, 1);
     display: flex;
-    margin-top: 2.4rem;
+    margin-top: 2.2rem;
     height: 2.4rem;
     align-items: center;
     text-align: left;
@@ -172,9 +175,9 @@
     background: none;
     cursor: pointer;
     align-items: center;
-    float: right;
+    // float: right;
     width: 2.2rem;
-    height: 1.5rem;
+    height: 1.6rem;
     padding: 0rem;
     margin: 0;
   }
@@ -183,11 +186,12 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    justify-content: center;
   }
 
   .showPassword {
     width: 2.2rem;
-    height: 2rem;
+    // height: 1.6rem;
     padding: 0rem;
     margin: 0;
   }

@@ -61,6 +61,7 @@ body .container .login-container .blueline {
 }
 body .container .login-container .content {
   padding: 0 3.2rem;
+  position: relative;
 }
 body .container .login-container .content .card-head {
   display: flex;
@@ -226,13 +227,15 @@ body .container .login-container .content .forgot {
   font-weight: 600;
   color: #1f7a54;
   opacity: 1;
+  position: relative;
+  left: 27.6rem;
   margin-top: 0.5rem;
   text-align: right;
   letter-spacing: 0rem;
   text-decoration: none;
   text-transform: uppercase;
   height: 1.8rem;
-  justify-self: end;
+  width: 14.8rem;
 }
 body .container .login-container .content .remember {
   font-family: "Quicksand", sans-serif;
@@ -241,7 +244,7 @@ body .container .login-container .content .remember {
   color: #222222;
   opacity: 1;
   display: flex;
-  margin-top: 2.4rem;
+  margin-top: 2.2rem;
   height: 2.4rem;
   align-items: center;
   text-align: left;
@@ -258,9 +261,8 @@ body .container .login-container .content .showPasswordBtn {
   background: none;
   cursor: pointer;
   align-items: center;
-  float: right;
   width: 2.2rem;
-  height: 1.5rem;
+  height: 1.6rem;
   padding: 0rem;
   margin: 0;
 }
@@ -268,10 +270,10 @@ body .container .login-container .content .passwordWrapper {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  justify-content: center;
 }
 body .container .login-container .content .showPassword {
   width: 2.2rem;
-  height: 2rem;
   padding: 0rem;
   margin: 0;
 }
