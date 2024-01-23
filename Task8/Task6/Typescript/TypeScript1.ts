@@ -173,29 +173,6 @@ function createCard(course: cardDataIf1 | cardDataIf2) {
     cardContainer.appendChild(cardDiv);
   }
 }
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navOptionContainer = document.createElement("div");
-//   navOptionContainer.classList.add("nav-option-container");
-//   document.body.appendChild(navOptionContainer);
-//   const showNavOptions = () => {
-//     fetch("./menu.json")
-//       .then((response) => response.json())
-//       .then((menuData: menudataif1[] | menudataif2[]) => {
-//         menuData.forEach((menu: menudataif1 | menudataif2) =>
-//           createMenuBox(menu)
-//         );
-//       })
-//       .catch((error) => console.error("Error fetching menu data:", error));
-
-//   };
-
-//   function createMenuBox(menuData: menudataif1 | menudataif2): void {
-//     const navOptionContent = document.createElement("div");
-//     navOptionContent.classList.add("nav-option-content");
-//     navOptionContent.innerHTML = `<a class="${menuData.type}" href="#"> ${menuData.name}</a>`;
-//     navOptionContainer.appendChild(navOptionContent);
-//   }
-// });
 
 const menuOptioncontainer = document.createElement("div");
 menuOptioncontainer.classList.add("nav-option-container");

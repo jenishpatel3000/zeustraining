@@ -352,6 +352,7 @@ body {
 }
 .content .card-container .card {
   position: relative;
+  width: 47.6rem;
   height: 24.6rem;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 0.2rem;
