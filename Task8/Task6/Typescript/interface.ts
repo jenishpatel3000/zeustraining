@@ -17,14 +17,22 @@ export interface cardDataIf1 {
   brightstar: boolean;
 }
 
-export interface menudataif1 {
+export interface notificationData {
   id: number;
-  name: string;
-  type: "item";
+  Description: string;
+  readStatus: boolean;
+  class: string;
+  Course: string;
+  Date_Time: string;
 }
-export interface menudataif2 {
+
+export interface AnnouncementData {
   id: number;
-  name: string;
-  type: "submenu";
-  items: [{ name: string; type: string }];
+  PA: string;
+  Description: string;
+  readStatus: boolean;
+  class: string;
+  Course: string;
+  files_atteched: string;
+  Date_Time: string;
 }

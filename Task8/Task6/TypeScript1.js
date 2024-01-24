@@ -22,7 +22,7 @@ function createCard(course) {
                                 src="${course.image}"
 
                                 alt="course image" />
-                                ${course.courseId === 4
+                                ${course.expire === true
         ? `  <div class="card-content1">`
         : `  <div class="card-content">`}
                                 <div class="card-heading${course.courseId}">${course.name}</div>
@@ -86,7 +86,7 @@ function createCard(course) {
         : ""}
                                 </div>
                             </div>
-                            ${course.courseId === 4
+                            ${course.brightstar === false
         ? `  <div class="star1">
                                 <img class="brightstar1"
                                     src="./quantum screen assets/quantum screen assets/icons/favourite.svg"
@@ -102,40 +102,24 @@ function createCard(course) {
   `;
     const underline = document.createElement("div");
     underline.classList.add("inputUnderlinecard");
-    console.log("screen.width:", screen.width);
     const btncontainer = document.createElement("div");
     btncontainer.classList.add("fourbtn-container");
-    // Function to update UI based on screen width
-    const blueline = document.querySelector(".blueline1");
-    function updateUI() {
-        if (btncontainer) {
-            btncontainer.innerHTML = `  
+    if (btncontainer) {
+        btncontainer.innerHTML = `  
       <img class="showicon" alt="show icon" src="./quantum screen assets/quantum screen assets/icons/preview.svg"></img>
-          ${(course.courseId === 3 || course.courseId === 2) &&
-                window.innerWidth >= 1023
-                ? `
-                  <img class="calendericon disabled" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
-                  <img class="gradeicon disabled" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
+          ${course.courseId === 3 || course.courseId === 2
+            ? `
+                  <img class="calendericon opacity" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
+                  <img class="gradeicon opacity" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
               `
-                : `
+            : `
                   <img class="calendericon" alt="calendar icon" src="./quantum screen assets/quantum screen assets/icons/manage course.svg"></img>
                   <img class="gradeicon" alt="grade icon" src="./quantum screen assets/quantum screen assets/icons/grade submissions.svg"></img>
               `}
           <img class="reporticon" alt="report icon" src="./quantum screen assets/quantum screen assets/icons/reports.svg"></img>
       `;
-        }
-        if (blueline && window.innerWidth > 950) {
-            blueline.style.display = "none";
-            blueline.style.visibility = "hidden";
-        }
-        else if (blueline && window.innerWidth <= 950) {
-            blueline.style.display = "block";
-            blueline.style.visibility = "visible";
-        }
     }
-    updateUI();
-    window.addEventListener("resize", updateUI);
-    if (course.courseId === 4) {
+    if (course.expire === true) {
         cardDiv.appendChild(courseExpired);
     }
     cardDiv.appendChild(cardContent);
@@ -145,27 +129,6 @@ function createCard(course) {
         cardContainer.appendChild(cardDiv);
     }
 }
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navOptionContainer = document.createElement("div");
-//   navOptionContainer.classList.add("nav-option-container");
-//   document.body.appendChild(navOptionContainer);
-//   const showNavOptions = () => {
-//     fetch("./menu.json")
-//       .then((response) => response.json())
-//       .then((menuData: menudataif1[] | menudataif2[]) => {
-//         menuData.forEach((menu: menudataif1 | menudataif2) =>
-//           createMenuBox(menu)
-//         );
-//       })
-//       .catch((error) => console.error("Error fetching menu data:", error));
-//   };
-//   function createMenuBox(menuData: menudataif1 | menudataif2): void {
-//     const navOptionContent = document.createElement("div");
-//     navOptionContent.classList.add("nav-option-content");
-//     navOptionContent.innerHTML = `<a class="${menuData.type}" href="#"> ${menuData.name}</a>`;
-//     navOptionContainer.appendChild(navOptionContent);
-//   }
-// });
 const menuOptioncontainer = document.createElement("div");
 menuOptioncontainer.classList.add("nav-option-container");
 menuOptioncontainer.innerHTML = `
@@ -194,24 +157,192 @@ menuOptioncontainer.style.display = "none";
 document.body.appendChild(menuOptioncontainer);
 const hamburgerIcon = document.querySelector(".hamburger");
 if (hamburgerIcon) {
-    hamburgerIcon.addEventListener("click", () => {
+    hamburgerIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (notifications)
+            notifications.style.display = "none";
+        if (announcements)
+            announcements.style.display = "none";
         if (menuOptioncontainer.style.display === "none")
             menuOptioncontainer.style.display = "block";
         else
             menuOptioncontainer.style.display = "none";
     });
 }
-const submenu = document.querySelector(".submenu");
-const menuoption = document.querySelector(".arrow-down");
-if (menuoption && submenu) {
-    menuoption.addEventListener("click", () => {
-        console.log("event listener clicked");
-        if (submenu.style.display === "none") {
-            submenu.style.display = "block";
+const menuoption = document.querySelectorAll(".menu-option");
+menuoption.forEach((menu) => {
+    const clickedSubmenu = menu.querySelector(".submenu");
+    if (menu && clickedSubmenu) {
+        menu.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (clickedSubmenu) {
+                if (clickedSubmenu.style.display === "none") {
+                    clickedSubmenu.style.display = "block";
+                }
+                else {
+                    clickedSubmenu.style.display = "none";
+                }
+            }
+            if (menuOptioncontainer.style.display === "none") {
+                clickedSubmenu.style.display = "none";
+            }
+        });
+    }
+});
+document.body.addEventListener("click", (event) => {
+    if (hamburgerIcon) {
+        if (!menuOptioncontainer.contains(event.target) &&
+            !hamburgerIcon.contains(event.target)) {
+            menuOptioncontainer.style.display = "none";
+            menuoption.forEach((menu) => {
+                const submenu = menu.querySelector(".submenu");
+                if (submenu) {
+                    submenu.style.display = "none";
+                }
+            });
         }
-        else {
-            submenu.style.display = "none";
+    }
+    if (notifications) {
+        if (!(notifications === null || notifications === void 0 ? void 0 : notifications.contains(event.target))) {
+            notifications.style.display = "none";
         }
+    }
+    if (announcements) {
+        if (!(announcements === null || announcements === void 0 ? void 0 : announcements.contains(event.target))) {
+            announcements.style.display = "none";
+        }
+    }
+});
+const notifications = document.querySelector(".notifications");
+if (notifications) {
+    notifications.style.display = "none";
+}
+const notifyIcon = document.querySelector(".notification");
+if (notifyIcon) {
+    notifyIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (announcements) {
+            announcements.style.display = "none";
+        }
+        menuOptioncontainer.style.display = "none";
+        if (notifications) {
+            notifications.innerHTML = "";
+        }
+        fetch("./NotificationData.json")
+            .then((response) => response.json())
+            .then((NotifyData) => {
+            // console.log(cardData);
+            NotifyData.forEach((notification) => {
+                createNotification(notification);
+            });
+            if (notifications)
+                notifications.innerHTML += `<div class="notify-buttons"><button type="button" class="show-button">Show All</button>
+        </div>`;
+        })
+            .catch((error) => console.error("Error fetching Notification Data:", error));
+        if (notifications)
+            (notifications === null || notifications === void 0 ? void 0 : notifications.style.display) == "none"
+                ? (notifications.style.display = "block")
+                : (notifications.style.display = "none");
     });
+}
+function createNotification(notification) {
+    const notifycontainer = document.createElement("div");
+    notifycontainer.classList.add("notify-container");
+    if (notifications) {
+        notifications.appendChild(notifycontainer);
+    }
+    notifycontainer.innerHTML = `
+    <div class="notify-firstline">
+          <div class="notify-description">${notification.Description}</div>
+          <div class="notify-readStatus">${notification.readStatus
+        ? `
+              <img class="readicon" src="./correct.png" alt="Notification Read" />
+            `
+        : `
+              <img class="dndicon" src="./dnd.png" alt="Notification not read" />
+            `}</div>
+          </div>
+          ${notification.class !== ""
+        ? `<div class="notify-class"><p class='lowoptitle'>Class:</p>${notification.class}</div>`
+        : `<div class="notify-emptyClass"></div>`}
+          ${notification.Course !== ""
+        ? `<div class="notify-course"><p class='lowoptitle'>Course:</p>${notification.Course}</div>`
+        : `<div class="notify-emptycourse"></div>`}
+          <div class="notify-dateTime">${notification.Date_Time}</div> 
+          
+          `;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const announcements = document.querySelector(".announcements");
+if (announcements) {
+    announcements.style.display = "none";
+}
+const announceIcon = document.querySelector(".Announcement");
+if (announceIcon) {
+    announceIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (notifications)
+            notifications.style.display = "none";
+        menuOptioncontainer.style.display = "none";
+        if (announcements) {
+            announcements.innerHTML = "";
+        }
+        fetch("./announcementData.json")
+            .then((response) => response.json())
+            .then((AnnounceData) => {
+            // console.log(cardData);
+            AnnounceData.forEach((announce) => {
+                createAnnouncement(announce);
+            });
+            if (announcements)
+                announcements.innerHTML += `<div class="announce-buttons"><button type="button" class="show-button">Show All</button>
+        <div class="btncenterline"></div>
+        <button type="button" class="create-button">create new</button>
+        </div>`;
+        })
+            .catch((error) => console.error("Error fetching Notification Data:", error));
+        if (announcements)
+            (announcements === null || announcements === void 0 ? void 0 : announcements.style.display) == "none"
+                ? (announcements.style.display = "block")
+                : (announcements.style.display = "none");
+    });
+}
+function createAnnouncement(announcement) {
+    const announcecontainer = document.createElement("div");
+    announcecontainer.classList.add("announce-container");
+    if (announcements) {
+        announcements.appendChild(announcecontainer);
+    }
+    announcecontainer.innerHTML = `
+  <div class="announce-PA"><p class='lowoptitle'>PA:</p>${announcement.PA}</div>
+    <div class="announce-firstline">
+          <div class="announce-description">${announcement.Description}</div>
+          <div class="announce-readStatus">${announcement.readStatus
+        ? `
+              <img class="readicon" src="./correct.png" alt="announcement Read" />
+            `
+        : `
+              <img class="dndicon" src="./dnd.png" alt="announcement not read" />
+            `}</div>
+          </div>
+          ${announcement.class !== ""
+        ? `<div class="announce-class"><p class='lowoptitle'>Class:</p>${announcement.class}</div>`
+        : `<div class="announce-emptyClass"></div>`}
+          ${announcement.Course !== ""
+        ? `<div class="announce-course"><p class='lowoptitle'>Course:</p>${announcement.Course}</div>`
+        : `<div class="announce-emptycourse"></div>`}
+          
+          ${announcement.files_atteched
+        ? ` <div class="announce-lastline"> <div class="announce-lastline-files">
+          <img src="./paperclip.svg" alt="paperclip icon" class="paperclip-icon" />
+          <div class="announce-fileatteched">${announcement.files_atteched}</div>
+          </div>
+          <div class="announce-dateTime">${announcement.Date_Time}</div> 
+          </div>`
+        : `  <div class="announce-dateTime">${announcement.Date_Time}</div> `}
+        
+          
+          `;
 }
 export {};
