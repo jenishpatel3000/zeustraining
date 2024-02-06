@@ -1,0 +1,613 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+}
+body .container {
+  flex: 1;
+}
+body .container .navbar {
+  background: transparent url("./quantum screen assets/quantum screen assets/header pattern image.png");
+  background-color: #25313f;
+  background-blend-mode: overlay;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+body .container .navbar .header_logo {
+  opacity: 1;
+  top: 1.1rem;
+  padding-left: 2.4rem;
+  width: auto;
+  height: 3.6rem;
+  opacity: 1;
+  margin: 0;
+}
+body .container .blueline1 {
+  width: auto;
+  height: 0.2rem;
+  background: #31b9e4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+body .container .login-container {
+  display: block;
+  background-color: #ffffff;
+  margin-top: 5.6rem;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 55rem;
+  width: 48.8rem;
+  box-sizing: border-box;
+}
+body .container .login-container .blueline {
+  height: 0.4rem;
+  background: #3ac7ec;
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  opacity: 1;
+}
+body .container .login-container .content {
+  padding: 0 3.2rem;
+}
+body .container .login-container .content .card-head {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  height: 3rem;
+}
+body .container .login-container .content .card-head .heading_box {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #222222;
+  opacity: 1;
+  padding-left: 7.7rem;
+  letter-spacing: 0rem;
+}
+body .container .login-container .content .card-head #back {
+  width: 1.7rem;
+  height: 2.6rem;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #1f7a54;
+  opacity: 1;
+  letter-spacing: 0.065rem;
+  margin: 0;
+  padding: 0;
+}
+body .container .login-container .content form {
+  display: flex;
+  flex-direction: column;
+}
+body .container .login-container .content form .school-type {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333333;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  letter-spacing: 0rem;
+  margin-top: 3.2rem;
+  height: 2rem;
+  padding: 0;
+}
+body .container .login-container .content form .school-type .radio {
+  margin: 0;
+  padding: 0;
+  width: 2rem;
+  height: 2.4rem;
+  margin-right: 0.8rem;
+  text-align: left;
+  font: normal normal normal 2.4rem/1.7rem "Material-Design-Iconic-Font";
+  letter-spacing: 0rem;
+  accent-color: #1f7a54;
+  opacity: 1;
+}
+body .container .login-container .content form .school-type .label {
+  margin: 0;
+  height: 2rem;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333333;
+  opacity: 1;
+  letter-spacing: 0rem;
+}
+body .container .login-container .content form .school-type .label1 {
+  padding-right: 3.2rem;
+  width: 5.3rem;
+  height: 2rem;
+}
+body .container .login-container .content form .school-type .label2 {
+  width: 17rem;
+}
+body .container .login-container .content .inputContainer {
+  height: 4.5rem;
+  margin-top: 2.3rem;
+  position: relative;
+}
+body .container .login-container .content .inputLabel {
+  width: 3.4rem;
+  height: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #a2a2a2;
+  opacity: 1;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+  letter-spacing: 0rem;
+}
+body .container .login-container .content .arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("./quantum screen assets/quantum screen assets/icons/arrow-down.svg");
+  background-size: 3rem 2.5rem;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+body .container .login-container .content .customInput {
+  padding-bottom: 0.5rem;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.6rem;
+  padding: 0;
+  margin-left: 0;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  color: #222222;
+  opacity: 1;
+  letter-spacing: 0rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+body .container .login-container .content .customInput:not(:-moz-placeholder-shown) {
+  border-color: #000;
+}
+body .container .login-container .content .customInput:focus, body .container .login-container .content .customInput:not(:placeholder-shown) {
+  border-color: #000;
+}
+body .container .login-container .content .customInput .option {
+  padding-left: 0;
+  margin-left: 0;
+}
+body .container .login-container .content .inputUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #000;
+  opacity: 0.12;
+  background: #000000 0% 0% no-repeat padding-box;
+}
+body .container .login-container .content .space-district {
+  margin-top: 3.6rem;
+}
+body .container .login-container .content .inputContainer1 {
+  height: 2.5rem;
+  margin-top: 5.6rem;
+  position: relative;
+}
+body .container .login-container .content .inputContainer1 .u1 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+body .container .login-container .content .forgot {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f7a54;
+  opacity: 1;
+  margin-top: 0.5rem;
+  text-align: right;
+  letter-spacing: 0rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 1.8rem;
+  justify-self: end;
+}
+body .container .login-container .content .remember {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #222222;
+  opacity: 1;
+  display: flex;
+  margin-top: 2.4rem;
+  height: 2.4rem;
+  align-items: center;
+  text-align: left;
+  letter-spacing: 0rem;
+  accent-color: #1f7a54;
+}
+body .container .login-container .content .inputContainer2 {
+  height: 2.5rem;
+  margin-top: 3.3rem;
+  position: relative;
+}
+body .container .login-container .content .showPasswordBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+  float: right;
+  width: 2.2rem;
+  height: 1.5rem;
+  padding: 0rem;
+  margin: 0;
+}
+body .container .login-container .content .passwordWrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+body .container .login-container .content .showPassword {
+  width: 2.2rem;
+  height: 2rem;
+  padding: 0rem;
+  margin: 0;
+}
+body .container .login-container .content .rem-check {
+  height: 2.4rem;
+  align-items: center;
+  width: 1.8rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  text-align: left;
+  font: normal normal normal 2.4rem/1.7rem Material-Design-Iconic-Font;
+  letter-spacing: 0rem;
+  color: #1f7a54;
+  opacity: 1;
+}
+body .container .login-container .button-div {
+  display: flex;
+  margin-top: 1.8rem;
+  width: 48.8rem;
+  height: 7.8rem;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+}
+body .container .login-container .button-div .submit {
+  width: 21.6rem;
+  height: 4rem;
+  padding: 0;
+  border: 0rem;
+  border-radius: 0.2rem;
+  background: #3fd28b 0% 0% no-repeat padding-box;
+  box-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2392156863);
+  opacity: 1;
+  margin-top: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+body .container .login-container .button-div .btn-text {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1f2834;
+  opacity: 1;
+  letter-spacing: 0rem;
+  width: 4.6rem;
+  margin-top: 1.1rem;
+  margin-bottom: 1rem;
+  height: 1.8rem;
+}
+body .footer-container {
+  text-align: center;
+  margin-top: auto;
+}
+body .footer-container .footer {
+  margin-top: 6.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0rem;
+  text-align: center;
+  color: #1f7a54;
+  opacity: 1;
+}
+body .footer-container .footer .about {
+  width: 4rem;
+  height: 1.8rem;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f7a1f;
+  opacity: 1;
+  letter-spacing: 0rem;
+  margin-right: 0.8rem;
+}
+body .footer-container .footer .contactus {
+  /* width: 7.2rem; */
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f7a1f;
+  opacity: 1;
+  margin-left: 0.8rem;
+  height: 1.8rem;
+  text-align: center;
+  letter-spacing: 0rem;
+}
+body .footer-container .footer .middleline {
+  width: 0px;
+  height: 1.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1215686275);
+  opacity: 1;
+}
+body .footer-container .last-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  height: 4rem;
+  width: auto;
+  background: #e0e1e1 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-top: 1.6rem;
+}
+body .footer-container .last-line .footer-logo {
+  height: 2.4rem;
+  width: 9rem;
+}
+body .footer-container .last-line .pipe {
+  margin: 0 1.6rem;
+  width: 0rem;
+  height: 2.4rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1215686275);
+  opacity: 1;
+}
+body .footer-container .last-line .f1 {
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #616161;
+  opacity: 1;
+  letter-spacing: 0rem;
+}
+body .footer-container .last-line .copyright {
+  height: 1.5rem;
+  margin-right: 0.8rem;
+}
+body .footer-container .last-line .zeus {
+  margin-right: 1.1rem;
+  font-weight: bold;
+}
+body .footer-container .last-line .rights {
+  height: 1.5rem;
+}
+
+.login-container .footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px) and (min-height: 798px) {
+  .login-container {
+    /* width: 90%; */
+    max-width: 60rem;
+    margin-top: 4rem;
+    /* height: auto; */
+  }
+}
+/* For screens with a maximum width of 768rem and height of 1024rem */
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  .login-container {
+    /* width: 90%; */
+    max-width: 50rem;
+    margin-top: 3rem;
+    height: auto;
+  }
+}
+@media screen and (min-height: 780px) {
+  .html {
+    font-size: 65%;
+  }
+  .login-container {
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 49rem;
+  }
+}
+@media screen and (min-height: 820px) {
+  .html {
+    font-size: 65%;
+  }
+  .login-container {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 49rem;
+    height: 58rem;
+  }
+}
+@media screen and (min-height: 870px) {
+  .html {
+    font-size: 68%;
+  }
+  .login-container {
+    margin-top: 9rem;
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 49.5rem;
+    height: 60rem;
+  }
+}
+@media screen and (min-height: 900px) {
+  .html {
+    font-size: 70%;
+  }
+  .login-container {
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    height: 62rem;
+    /* height: 65rem; */
+  }
+}
+@media screen and (min-height: 940px) {
+  .html {
+    font-size: 72%;
+  }
+  .login-container {
+    margin-top: 14rem;
+    margin-bottom: 11rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    height: 62rem;
+    /* height: 68rem; */
+  }
+}
+@media screen and (min-height: 1000px) {
+  .html {
+    font-size: 75%;
+  }
+  .login-container {
+    margin-top: 16rem;
+    margin-bottom: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    height: 62rem;
+    /* height: 70rem; */
+  }
+}
+@media screen and (min-height: 1050px) {
+  .html {
+    font-size: 78%;
+  }
+  .login-container {
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    height: 62rem;
+    /* height: 72rem; */
+  }
+}
+@media screen and (min-height: 1100px) {
+  .html {
+    font-size: 81%;
+  }
+  .login-container {
+    margin-top: 20rem;
+    margin-bottom: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52rem;
+    height: 64rem;
+    /* height: 75rem; */
+  }
+}
+@media screen and (min-height: 1150px) {
+  .html {
+    font-size: 85%;
+  }
+  .login-container {
+    margin-top: 22rem;
+    margin-bottom: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52rem;
+    height: 66rem;
+    /* height: 78rem; */
+  }
+}
+@media screen and (min-height: 1200px) {
+  .html {
+    font-size: 88%;
+  }
+  .login-container {
+    margin-top: 24rem;
+    margin-bottom: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54rem;
+    height: 66rem;
+    /* height: 80rem; */
+  }
+}
+@media screen and (min-height: 1250px) {
+  .html {
+    font-size: 88%;
+  }
+  .login-container {
+    margin-top: 24rem;
+    margin-bottom: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54rem;
+    height: 66rem;
+    /* height: 80rem; */
+  }
+}
+/* ... Your existing CSS rules ... */
+/* Mobile screens */
+@media only screen and (max-width: 520px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 28%;
+  }
+}
+@media only screen and (max-width: 250px) {
+  html {
+    font-size: 22%;
+  }
+}
+@media only screen and (max-width: 170px) {
+  html {
+    font-size: 15%;
+  }
+}
+@media only screen and (max-width: 110px) {
+  html {
+    font-size: 10%;
+  }
+}/*# sourceMappingURL=login.component.css.map */

@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="sub-container1">
+
+        <span class="navbar">
+            <img class="header_logo"
+                src="./assets/quantum screen assets/quantum screen assets/icons/logo used in header.svg"
+                alt="QUANTUM logo" />
+        </span>
+        <div class="blueline1"></div>
+    </div>
+    <div class="login-container">
+        <div class="blueline"></div>
+        <div class="content">
+            <div class="card-head">
+                <svg id="back" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="Bounding_Boxes">
+                        <path id="Path_1831" data-name="Path 1831" d="M0,0H24V24H0Z" fill="none" />
+                    </g>
+                    <g id="Outline_1_">
+                        <path class="back" id="Path_1832" data-name="Path 1832"
+                            d="M20,11H7.83l5.59-5.59L12,4,4,12l8,8,1.41-1.41L7.83,13H20Z" fill="#1f7a54" />
+                    </g>
+                </svg>
+                <!-- <h1 class="card-heading">Log in with Quantum</h1> -->
+                <h2 class="heading_box">Log in with Quantum</h2>
+            </div>
+            <form method="post">
+                <label class="school-type">
+                    <input type="radio" class="radio" name="school-type" value="district" />
+                    <div class="label label1">District</div>
+                    <input type="radio" class="radio" name="school-type" value="independent" />
+                    <div class="label label2">Independent school</div>
+                </label>
+
+                <div class="inputContainer">
+                    <label class="inputLabel">State*</label>
+                    <select required="true" class="customInput arrow" id="ci1" name="state">
+                        <option class="option" value="" disabled selected>Select your state</option>
+                        <option class="option" value="Alabama" selected>Alabama</option>
+                        <option value="Alaska" class="option">Alaska</option>
+                        <option value="Arizona" class="option">Arizona</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <div class="inputUnderline"></div>
+                </div>
+
+
+                <div class="inputContainer space-district">
+                    <label class="inputLabel dis">District*</label>
+                    <select required="true" class="customInput arrow" id="ci2" name="district">
+                        <option value="" disabled selected>Select your district</option>
+                        <option value="District 1" selected>Alabama School District</option>
+                        <option value="District 2">District 2</option>
+                        <option value="District 3">District 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <div class="inputUnderline"></div>
+                </div>
+
+                <div class="inputContainer1">
+                    <input type="text" required="" class="customInput u1" name="username"
+                        placeholder="Username/Email ID*" />
+                    <!-- <label class="inputLabel">Username</label> -->
+                    <div class="inputUnderline"></div>
+                </div>
+                <a href="#" class="forgot">FORGOT USERNAME?</a>
+
+                <div class="inputContainer2">
+                    <div class="passwordWrapper">
+
+                        <input type="password" required="" class="customInput u1" name="password" id="passwordField"
+                            placeholder="Password*" />
+                        <button type="button" class="showPasswordBtn" onclick="togglePassword()">
+                            <img class="showPassword"
+                                src="./assets/quantum screen assets/quantum screen assets/icons/preview.svg"
+                                alt="hamburger icon">
+                        </button>
+                        <div class="inputUnderline"></div>
+                    </div>
+                </div>
+                <a href="#" class="forgot">FORGOT PASSWORD?</a>
+
+
+                <label class="remember"><input type="checkbox" class="rem-check" /> Remember Me</label>
+
+                <!-- Login button -->
+            </form>
+        </div>
+        <div class="button-div">
+            <button class="submit" type="submit" (click)="showDashboard()">
+                <span class="btn-text">
+
+                    LOG IN
+                </span>
+            </button>
+        </div>
+
+    </div>
+    <!-- Footer links -->
+</div>

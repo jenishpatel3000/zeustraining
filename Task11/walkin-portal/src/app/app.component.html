@@ -1,0 +1,3 @@
+<app-login (dataEvent)="receiveData($event)" *ngIf="!showDash"></app-login>
+<app-dashboard *ngIf="showDash"></app-dashboard>
+<app-footer></app-footer>

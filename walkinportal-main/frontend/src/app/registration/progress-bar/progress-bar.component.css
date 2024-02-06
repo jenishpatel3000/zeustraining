@@ -1,0 +1,38 @@
+.reg-progress-bar {
+  margin: 24px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+}
+.reg-progress-bar .progress-div {
+  display: flex;
+  align-items: center;
+}
+.reg-progress-bar .progress-div .complete {
+  background-color: #3FD28B;
+}
+.reg-progress-bar .progress-div .incomplete {
+  background-color: #757575;
+}
+.reg-progress-bar .progress-div .progress-numbers-circle {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+}
+.reg-progress-bar .progress-div .progress-numbers-circle .progress-numbers {
+  margin: auto auto;
+}
+.reg-progress-bar .progress-div .progress-labels {
+  color: #222222;
+  margin-left: 8px;
+}
+.reg-progress-bar .progress-line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  flex: 1;
+  margin: 8px;
+}/*# sourceMappingURL=progress-bar.component.css.map */

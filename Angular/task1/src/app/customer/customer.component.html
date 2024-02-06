@@ -1,0 +1,7 @@
+<!-- <h2>Welcome to my customer component</h2> -->
+<h2 [hidden]="!isVisible">{{title}}</h2>
+<button type="button" (click)="showHide()">Show / Hide</button>
+<br />
+
+<br />
+<app-customers-list [customers]="people"></app-customers-list>

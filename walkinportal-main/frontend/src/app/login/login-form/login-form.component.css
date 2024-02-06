@@ -1,0 +1,76 @@
+.main {
+  padding: 20px 36px 24px 36px;
+  margin: 150px auto auto auto;
+  width: 450px;
+  background: #ffffff;
+  border-top: 4px solid;
+  border-color: #3AC7EC;
+  border-radius: 2px 2px 0px 0px;
+}
+.main .form-title {
+  display: flex;
+  margin-bottom: 32px;
+}
+.main .form-title .title {
+  margin: 0 auto;
+  font-size: 24px;
+  color: #222222;
+}
+.main .input-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.main .username-div {
+  margin-bottom: 33px;
+}
+.main .password-div {
+  margin-bottom: 24px;
+}
+.main .password-div .password-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.main .password-div .password-flex .state-input {
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  color: #666666;
+}
+.main .username-password-input {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #666666;
+}
+.main .input-underline {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+.main .forgot-labels {
+  text-align: right;
+  font-size: 14px;
+  color: #1F7A54;
+  text-transform: uppercase;
+}
+.main .rememberme-div {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+.main .rememberme-div input[type=checkbox] {
+  accent-color: #1F7A54;
+}
+.main .submit {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  width: 216px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background: #3FD28B 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2392156863);
+}/*# sourceMappingURL=login-form.component.css.map */
