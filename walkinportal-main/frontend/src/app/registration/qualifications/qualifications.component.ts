@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-progress-bar',
-  templateUrl: './progress-bar.component.html',
+  selector: 'app-qualifications',
+  templateUrl: './qualifications.component.html',
   styleUrls: ['./SCSS/style.scss'],
 })
-export class ProgressBarComponent implements OnInit {
+export class QualificationsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

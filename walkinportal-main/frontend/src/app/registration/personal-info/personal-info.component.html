@@ -15,13 +15,17 @@
             </div>
             <div class="data-div">
                 <div class="label">Phone Number*</div>
-                <input type="tel" class="phone-input">
+                <div class="number-div">
+                    <div class="plus">+</div>
+                    <input type="tel" title="code" placeholder="" class="code-input" />
+                    <input type="tel" title="number" placeholder="" class="phone-input" />
+                </div>
             </div>
-            <label class="data-div upload-resume-div" (change)="uploadResume($event)" for="resume-input">
+            <label class="data-div upload-resume-div" tabindex="0" (change)="uploadResume($event)" for="resume-input">
                 <img src="../../../assets/svgs/Upload_24dp.svg" alt="upload" class="upload-svg">
-                <input type="file" class="resume-input" accept="application/pdf" id="resume-input">
+                <input type="file" class="resume-input" tabindex="1" accept="application/pdf" id="resume-input" />
                 <div class="upload-label">Upload Resume</div>
-                <input class="file-name" placeholder="{{fileName}}" disabled>
+                <input class="file-name" placeholder="{{fileName}}" disabled />
             </label>
             <div class="data-div">
                 <div class="label">Enter Portfolio URL(if any)</div>
@@ -45,7 +49,7 @@
             <div class="data-div">
                 <div class="label">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who
                     Referred You</div>
-                <input type="text" class="text-input">
+                <input type="text" title="Referral" placeholder="" class="text-input" />
             </div>
             <div class="sendmeupdates-div">
                 <input type="checkbox" id="sendmeupdates" class="updates-checkbox">
@@ -54,7 +58,7 @@
         </div>
         <div class="photo-upload">
             <div class="flex-div">
-                <img [src]=profilePhotoSrc alt="default-profile-photo" class="profile-photo">
+                <img [src]=profilePhotoSrc alt="default-profile-photo" tabindex="" class="profile-photo">
                 <label for="photo-input" class="photo-input-label" (change)="uploadProfilePhoto($event)">
                     <input type="file" class="photo-input" id="photo-input" accept="image/jpeg,image/jpg,image/png">
                     <div class="upload-label">UPLOAD DISPLAY PICTURE</div>

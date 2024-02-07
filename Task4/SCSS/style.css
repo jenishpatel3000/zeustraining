@@ -437,9 +437,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 780px) {
-  .html {
-    font-size: 65%;
-  }
   .login-container {
     margin-top: 7rem;
     margin-bottom: 1rem;
@@ -449,9 +446,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 820px) {
-  .html {
-    font-size: 65%;
-  }
   .login-container {
     margin-top: 8rem;
     margin-bottom: 5rem;
@@ -462,9 +456,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 870px) {
-  .html {
-    font-size: 68%;
-  }
   .login-container {
     margin-top: 9rem;
     margin-bottom: 6rem;
@@ -475,9 +466,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 900px) {
-  .html {
-    font-size: 70%;
-  }
   .login-container {
     margin-top: 10rem;
     margin-bottom: 8rem;
@@ -489,9 +477,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 940px) {
-  .html {
-    font-size: 72%;
-  }
   .login-container {
     margin-top: 14rem;
     margin-bottom: 11rem;
@@ -503,9 +488,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1000px) {
-  .html {
-    font-size: 75%;
-  }
   .login-container {
     margin-top: 16rem;
     margin-bottom: 15rem;
@@ -517,9 +499,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1050px) {
-  .html {
-    font-size: 78%;
-  }
   .login-container {
     margin-top: 18rem;
     margin-bottom: 18rem;
@@ -531,9 +510,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1100px) {
-  .html {
-    font-size: 81%;
-  }
   .login-container {
     margin-top: 20rem;
     margin-bottom: 18rem;
@@ -545,9 +521,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1150px) {
-  .html {
-    font-size: 85%;
-  }
   .login-container {
     margin-top: 22rem;
     margin-bottom: 20rem;
@@ -559,9 +532,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1200px) {
-  .html {
-    font-size: 88%;
-  }
   .login-container {
     margin-top: 24rem;
     margin-bottom: 22rem;
@@ -573,9 +543,6 @@ body .footer-container .last-line .rights {
   }
 }
 @media screen and (min-height: 1250px) {
-  .html {
-    font-size: 88%;
-  }
   .login-container {
     margin-top: 24rem;
     margin-bottom: 25rem;
@@ -603,12 +570,12 @@ body .footer-container .last-line .rights {
     font-size: 22%;
   }
 }
-@media only screen and (max-width: 170px) {
+@media only screen and (max-width: 180px) {
   html {
     font-size: 15%;
   }
 }
-@media only screen and (max-width: 110px) {
+@media only screen and (max-width: 120px) {
   html {
     font-size: 10%;
   }
