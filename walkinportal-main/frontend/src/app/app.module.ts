@@ -9,18 +9,9 @@ import { LoginModule } from './login/login.module';
 import { RegistrationModule } from './registration/registration.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    LoginModule,
-    RegistrationModule
-  ],
+  declarations: [AppComponent, HeaderComponent, ContactComponent],
+  imports: [BrowserModule, AppRoutingModule, LoginModule, RegistrationModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
