@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { QualificationsComponent } from './qualifications.component';
 import { EdQualificationsComponent } from './ed-qualifications/ed-qualifications.component';
@@ -10,7 +11,7 @@ import { ProQualificationsComponent } from './pro-qualifications/pro-qualificati
     ProQualificationsComponent,
     QualificationsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [
     EdQualificationsComponent,
     ProQualificationsComponent,

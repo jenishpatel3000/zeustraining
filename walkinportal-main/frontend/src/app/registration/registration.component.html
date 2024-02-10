@@ -1,1 +1,13 @@
-<app-qualifications></app-qualifications>
+<app-create-account-bar></app-create-account-bar>
+<app-progress-bar></app-progress-bar>
+<app-personal-info (personalInfoUpdated)="updatePersonalInfo($event)" class="step1"
+    [hidden]="isEnabled"></app-personal-info>
+<app-qualifications (eduQualificationUpdated)="updateEducationQualifications($event)" class="step2"
+    [hidden]="!isEnabled"></app-qualifications>
+
+<div class="buttonContainer">
+
+    <button type="button" (click)="showStep1()" [hidden]="!isEnabled" class="next-button">PREVIOUS</button>
+    <button type="button" (click)="showStep2()" class="next-button">NEXT</button>
+
+</div>
