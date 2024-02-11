@@ -19,48 +19,39 @@ export class ReviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.UserData);
     // Assuming you have personalInfo.Resume available to initialize fileName
     this.fileName = this.UserData.personalInfo.Resume
       ? this.UserData.personalInfo.Resume.name
       : '';
 
-    const applicanttype = document.querySelectorAll('input[name="Applicant"]');
-    applicanttype.forEach((applicanttype) => {
-      if (applicanttype) {
-        applicanttype.addEventListener('change', function () {
-          let item = (applicanttype as HTMLInputElement).value;
+    const applicanttype =
+      this.UserData.Qualifications.ProfessionalQualifications.ApplicantType;
 
-          if (item === 'Fresher') {
-            (
-              document.querySelector('.proqualifications') as HTMLInputElement
-            ).style.display = 'none';
-            (
-              document.querySelector(
-                '.fresherqualifications'
-              ) as HTMLInputElement
-            ).style.display = 'block';
-          } else if (item === 'Experienced') {
-            (
-              document.querySelector('.proqualifications') as HTMLInputElement
-            ).style.display = 'block';
-            (
-              document.querySelector(
-                '.fresherqualifications'
-              ) as HTMLInputElement
-            ).style.display = 'none';
-          } else {
-            (
-              document.querySelector('.proqualifications') as HTMLInputElement
-            ).style.display = 'none';
-            (
-              document.querySelector(
-                '.fresherqualifications'
-              ) as HTMLInputElement
-            ).style.display = 'none';
-          }
-        });
+    if (applicanttype) {
+      if (applicanttype === 'Fresher') {
+        (
+          document.querySelector('.proqualifications') as HTMLInputElement
+        ).style.display = 'none';
+        (
+          document.querySelector('.fresherqualifications') as HTMLInputElement
+        ).style.display = 'block';
+      } else if (applicanttype === 'Experienced') {
+        (
+          document.querySelector('.proqualifications') as HTMLInputElement
+        ).style.display = 'block';
+        (
+          document.querySelector('.fresherqualifications') as HTMLInputElement
+        ).style.display = 'none';
+      } else {
+        (
+          document.querySelector('.proqualifications') as HTMLInputElement
+        ).style.display = 'none';
+        (
+          document.querySelector('.fresherqualifications') as HTMLInputElement
+        ).style.display = 'none';
       }
-    });
+    }
   }
 
   photoinput = document.querySelector('.photo-input');

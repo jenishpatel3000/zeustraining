@@ -1,0 +1,33 @@
+[
+  {
+    "JobId": 1,
+    "JobTitle": "Walk In for Designer Job Role",
+    "JobDateTime": "10-Jul-2021 to 11-Jul-2021",
+    "JobLocation": "Mumbai",
+    "JobRoles": ["Instructional Designer"],
+    "JobSpecialMessage": "",
+    "JobExpiringRemainingDays": 5
+  },
+  {
+    "JobId": 2,
+    "JobTitle": "Walk In for Multiple Job Roles",
+    "JobDateTime": "03-Jul-2021 to 04-Jul-2021",
+    "JobLocation": "Mumbai",
+    "JobRoles": [
+      "Instructional Designer",
+      "Software Engineer",
+      "Software Quality Engineer"
+    ],
+    "JobSpecialMessage": "Internship Opportunity for MCA Students",
+    "JobExpiringRemainingDays": 0
+  },
+  {
+    "JobId": 3,
+    "JobTitle": "Walk In for Design and Development Job Role",
+    "JobDateTime": "10-Jul-2021 to 11-Jul-2021",
+    "JobLocation": "Mumbai",
+    "JobRoles": ["Instructional Designer", "Software Engineer"],
+    "JobSpecialMessage": "",
+    "JobExpiringRemainingDays": 0
+  }
+]

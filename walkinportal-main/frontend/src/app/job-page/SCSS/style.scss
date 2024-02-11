@@ -1,0 +1,40 @@
+$bgcolor: #ffffff;
+$labelcolor: rgba(102, 102, 102, 0.8);
+$inputcolor: #222222;
+$accentcolor: #1f7a54;
+$nextbuttonbgcolor: #3fd28b;
+$nextbuttoncolor: #1f2834;
+$buttonshadow: 0rem 0.3rem 0.5rem #0000003d;
+$fontsize12: 1.2rem;
+$fontsize14: 1.4rem;
+$fontsize16: 1.6rem;
+$fontsize20: 2rem;
+$fontsize24: 2.4rem;
+$mainfont: "Quicksand";
+
+.jobcontainer1 {
+  .JobTitle {
+  }
+  .JobDateLocationContainer {
+    .JobDate {
+      .JobDateLabel {
+      }
+      .JobDateTime {
+      }
+    }
+    .JobLocation {
+    }
+  }
+  .DividingLine {
+  }
+  .JobRoleContainer {
+    .JobRoleLabel {
+    }
+    .JobRole {
+      .JobRoleImage {
+      }
+      .JobRoleName {
+      }
+    }
+  }
+}

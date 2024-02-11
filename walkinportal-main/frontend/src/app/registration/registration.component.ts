@@ -48,7 +48,18 @@ export class RegistrationComponent implements OnInit {
       },
       ProfessionalQualifications: {
         ApplicantType: '',
-      } as ProfessionalQualification,
+        YearsOfExperience: 0,
+        CurrentCTC: '',
+        ExpectedCTC: '',
+        TechExpertized: [],
+        OtherTechExpertized: '',
+        TechFamiliar: [],
+        OtherTechFamiliar: '',
+        NoticePeriod: Yesorno.No,
+        NoticePeriodEndDate: new Date(),
+        AppearedIn: Yesorno.No,
+        RoleAppearedIn: '',
+      },
     },
   };
   Freshers: Fresher = {
@@ -103,30 +114,75 @@ export class RegistrationComponent implements OnInit {
         this.userData.Qualifications.EducationalQualifications.Percentage
     );
   }
+  // updateProfessionalQualifications(profQualifications: any): void {
+  //   let profQual = this.userData.Qualifications.ProfessionalQualifications;
+
+  //   console.log('Applicant Type:', profQual.ApplicantType);
+
+  //   if (profQualifications.ApplicantType === 'Fresher') {
+  //     profQual = {
+  //       ...this.Freshers,
+  //     };
+  //   } else if (profQualifications.ApplicantType === 'Experienced') {
+  //     console.log('Updating for Experienced');
+  //     console.log('Experience:', this.experience);
+  //     // Assign properties only if they are defined
+  //     if (this.experience) {
+  //       profQual = {
+  //         ...this.experience,
+  //       };
+  //     }
+  //   }
+  //   profQual = profQualifications;
+
+  //   // Console log for debugging (comment out in production)
+  //   console.log(
+  //     'in regestration component Professional Qualifications:',
+  //     profQual
+  //   );
+  // }
   updateProfessionalQualifications(profQualifications: any): void {
-    let profQual = this.userData.Qualifications.ProfessionalQualifications;
-
-    console.log('Applicant Type:', profQual.ApplicantType);
-
-    if (profQualifications.ApplicantType === 'Fresher') {
-      profQual = {
-        ...this.Freshers,
-      };
-    } else if (profQualifications.ApplicantType === 'Experienced') {
-      console.log('Updating for Experienced');
-      console.log('Experience:', this.experience);
-      // Assign properties only if they are defined
-      if (this.experience) {
-        profQual = {
-          ...this.experience,
-        };
-      }
+    if (!profQualifications) {
+      console.error('Professional qualifications data is missing');
+      return;
     }
-    profQual = profQualifications;
+
+    const profQual = this.userData.Qualifications.ProfessionalQualifications;
+
+    // Check the applicant type and access properties accordingly
+    if (profQual.ApplicantType === 'Fresher') {
+      // Handle Fresher type
+      const fresherQualifications = profQual as Fresher;
+      fresherQualifications.TechFamiliar = profQualifications.TechFamiliar;
+      fresherQualifications.OtherTechFamiliar =
+        profQualifications.OtherTechFamiliar;
+      fresherQualifications.AppearedIn = profQualifications.AppearedIn;
+      fresherQualifications.RoleAppearedIn = profQualifications.RoleAppearedIn;
+    } else if (profQual.ApplicantType === 'Experienced') {
+      // Handle Experienced type
+      const experiencedQualifications = profQual as Experienced;
+      experiencedQualifications.YearsOfExperience =
+        profQualifications.YearsOfExperience;
+      experiencedQualifications.CurrentCTC = profQualifications.CurrentCTC;
+      experiencedQualifications.ExpectedCTC = profQualifications.ExpectedCTC;
+      experiencedQualifications.TechExpertized =
+        profQualifications.TechExpertized;
+      experiencedQualifications.OtherTechExpertized =
+        profQualifications.OtherTechExpertized;
+      experiencedQualifications.NoticePeriod = profQualifications.NoticePeriod;
+      experiencedQualifications.NoticePeriodEndDate =
+        profQualifications.NoticePeriodEndDate;
+      experiencedQualifications.AppearedIn = profQualifications.AppearedIn;
+      experiencedQualifications.RoleAppearedIn =
+        profQualifications.RoleAppearedIn;
+    } else {
+      console.error('Invalid applicant type');
+      return;
+    }
 
     // Console log for debugging (comment out in production)
     console.log(
-      'in regestration component Professional Qualifications:',
+      'in registration component Professional Qualifications:',
       profQual
     );
   }
