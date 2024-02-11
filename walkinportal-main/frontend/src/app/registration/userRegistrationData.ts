@@ -22,8 +22,12 @@ export interface userData {
       otherCollege: string;
       collegeLocation: string;
     };
+    // ProfessionalQualifications: ProfessionalQualification;
     ProfessionalQualifications: Fresher | Experienced;
   };
+}
+export interface ProfessionalQualification extends Fresher, Experienced {
+  ApplicantType: string;
 }
 
 export interface Experienced {
@@ -53,11 +57,11 @@ export enum Yesorno {
   No = 'No',
 }
 export enum Tech {
-  Javascript = 'Javascript',
-  AngularJS = 'Angular JS',
-  React = 'React',
-  NodeJS = 'Node JS',
-  Others = 'Others',
+  val1 = 'Javascript',
+  val2 = 'Angular JS',
+  val3 = 'React',
+  val4 = 'Node JS',
+  val5 = 'Others',
 }
 export enum year {
   val1 = '2020',

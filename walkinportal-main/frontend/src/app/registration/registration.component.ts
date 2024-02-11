@@ -10,6 +10,7 @@ import {
   Steam,
   JobRoles,
   year,
+  ProfessionalQualification,
 } from './userRegistrationData';
 @Component({
   selector: 'app-registration',
@@ -20,6 +21,7 @@ import {
 export class RegistrationComponent implements OnInit {
   // show2: boolean = false;
   isEnabled: boolean = false;
+
   userData: userData = {
     PersonalInformation: {
       FirstName: '',
@@ -46,11 +48,7 @@ export class RegistrationComponent implements OnInit {
       },
       ProfessionalQualifications: {
         ApplicantType: '',
-        TechFamiliar: [],
-        OtherTechFamiliar: '',
-        AppearedIn: Yesorno.No,
-        RoleAppearedIn: '',
-      },
+      } as ProfessionalQualification,
     },
   };
   Freshers: Fresher = {
@@ -77,11 +75,25 @@ export class RegistrationComponent implements OnInit {
 
   userDataArray: userData[] = [];
 
+  // initializeProfessionalQualifications(applicantType: string): void {
+  //   if (applicantType === 'Fresher') {
+  //     this.userData.Qualifications.ProfessionalQualifications = {
+  //       ...this.Freshers,
+  //     };
+  //   } else if (applicantType === 'Experienced') {
+  //     this.userData.Qualifications.ProfessionalQualifications = {
+  //       ...this.experience,
+  //     };
+  //   } else {
+  //     console.error('Invalid applicant type');
+  //   }
+  // }
   updatePersonalInfo(personalInfo: any): void {
     this.userData.PersonalInformation = personalInfo;
-    // console.log(
-    //   'registration component ' + this.userData.PersonalInformation.Resume
-    // );
+    console.log(
+      'registration component ' +
+        this.userData.PersonalInformation.PreferredJobRoles
+    );
   }
 
   updateEducationQualifications(eduQualifications: any): void {
@@ -91,10 +103,32 @@ export class RegistrationComponent implements OnInit {
         this.userData.Qualifications.EducationalQualifications.Percentage
     );
   }
-
   updateProfessionalQualifications(profQualifications: any): void {
-    this.userData.Qualifications.ProfessionalQualifications =
-      profQualifications;
+    let profQual = this.userData.Qualifications.ProfessionalQualifications;
+
+    console.log('Applicant Type:', profQual.ApplicantType);
+
+    if (profQualifications.ApplicantType === 'Fresher') {
+      profQual = {
+        ...this.Freshers,
+      };
+    } else if (profQualifications.ApplicantType === 'Experienced') {
+      console.log('Updating for Experienced');
+      console.log('Experience:', this.experience);
+      // Assign properties only if they are defined
+      if (this.experience) {
+        profQual = {
+          ...this.experience,
+        };
+      }
+    }
+    profQual = profQualifications;
+
+    // Console log for debugging (comment out in production)
+    console.log(
+      'in regestration component Professional Qualifications:',
+      profQual
+    );
   }
 
   saveUserData(): void {
@@ -126,11 +160,7 @@ export class RegistrationComponent implements OnInit {
         },
         ProfessionalQualifications: {
           ApplicantType: '',
-          TechFamiliar: [],
-          OtherTechFamiliar: '',
-          AppearedIn: Yesorno.No,
-          RoleAppearedIn: '',
-        },
+        } as ProfessionalQualification,
       },
     };
   }
@@ -146,5 +176,7 @@ export class RegistrationComponent implements OnInit {
     // const qualifications = document.querySelector('.step2');
     this.isEnabled = true;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.userData);
+  }
 }

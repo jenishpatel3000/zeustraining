@@ -22,6 +22,7 @@ import { userData } from './userRegistrationData';
     CreateAccountBarComponent,
     ProgressBarComponent,
     PersonalInfoComponent,
+    ReviewComponent,
     RegistrationComponent,
   ],
 })
