@@ -65,6 +65,7 @@ export class PersonalInfoComponent implements OnInit {
 
       reader.onload = (e: any) => {
         this.profilePhotoSrc = e.target.result;
+        this.personalInfo.profilePhoto = this.profilePhotoSrc;
       };
 
       reader.readAsDataURL(this.inputPhoto);

@@ -8,8 +8,6 @@
     [hidden]="!qualificationShow"></app-qualifications>
 <app-review [hidden]="!reviewShow" [UserData]="userData" class="step3"></app-review>
 <div class="buttonContainer">
-
     <button type="button" (click)="previous()" [hidden]="personalShow" class="next-button">PREVIOUS</button>
     <button type="button" (click)="next()" [hidden]="reviewShow" class="next-button">NEXT</button>
-
 </div>

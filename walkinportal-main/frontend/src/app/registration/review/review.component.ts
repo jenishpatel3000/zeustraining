@@ -19,6 +19,19 @@ export class ReviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // const photoinput = document.querySelector('.photo-input');
+    // const inputPhoto = this.UserData.PersonalInformation.ProfilePhoto;
+    // let profilePhotoSrc = '../../../assets/images/default-profile-photo.png';
+    // if (inputPhoto) {
+    //   this.profilePhotoSrc = inputPhoto;
+    // }
+
+    // const reader = new FileReader();
+    // reader.onload = (e: any) => {
+    //   this.profilePhotoSrc = e.target.result;
+    //   this.UserData.PersonalInformation.profilePhoto = this.profilePhotoSrc;
+    // };
+    // reader.readAsDataURL(this.profilePhotoSrc);
     console.log('jenish logging from review object' + this.UserData);
     // Assuming you have personalInfo.Resume available to initialize fileName
 
