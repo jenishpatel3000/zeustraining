@@ -19,38 +19,33 @@ export class ReviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.UserData);
+    console.log('jenish logging from review object' + this.UserData);
     // Assuming you have personalInfo.Resume available to initialize fileName
-    this.fileName = this.UserData.personalInfo.Resume
-      ? this.UserData.personalInfo.Resume.name
-      : '';
 
-    const applicanttype =
-      this.UserData.Qualifications.ProfessionalQualifications.ApplicantType;
+    if (
+      this.UserData &&
+      this.UserData.Qualifications &&
+      this.UserData.Qualifications.ProfessionalQualifications
+    ) {
+      const applicantType =
+        this.UserData.Qualifications.ProfessionalQualifications.ApplicantType;
+      console.log('ApplicantType:', applicantType);
 
-    if (applicanttype) {
-      if (applicanttype === 'Fresher') {
-        (
-          document.querySelector('.proqualifications') as HTMLInputElement
-        ).style.display = 'none';
-        (
-          document.querySelector('.fresherqualifications') as HTMLInputElement
-        ).style.display = 'block';
-      } else if (applicanttype === 'Experienced') {
-        (
-          document.querySelector('.proqualifications') as HTMLInputElement
-        ).style.display = 'block';
-        (
-          document.querySelector('.fresherqualifications') as HTMLInputElement
-        ).style.display = 'none';
+      if (applicantType === 'Fresher') {
+        this.showFresherQualifications();
+      } else if (applicantType === 'Experienced') {
+        this.showProfessionalQualifications();
       } else {
-        (
-          document.querySelector('.proqualifications') as HTMLInputElement
-        ).style.display = 'none';
-        (
-          document.querySelector('.fresherqualifications') as HTMLInputElement
-        ).style.display = 'none';
+        this.hideAllQualifications();
       }
+    }
+
+    if (
+      this.UserData &&
+      this.UserData.personalInfo &&
+      this.UserData.personalInfo.Resume
+    ) {
+      this.fileName = this.UserData.personalInfo.Resume.name;
     }
   }
 
@@ -71,5 +66,21 @@ export class ReviewComponent implements OnInit {
 
       reader.readAsDataURL(this.inputPhoto);
     }
+  }
+  private showFresherQualifications(): void {
+    document.querySelector('.proqualifications')?.classList.add('hidden');
+    document
+      .querySelector('.fresherqualifications')
+      ?.classList.remove('hidden');
+  }
+
+  private showProfessionalQualifications(): void {
+    document.querySelector('.proqualifications')?.classList.remove('hidden');
+    document.querySelector('.fresherqualifications')?.classList.add('hidden');
+  }
+
+  private hideAllQualifications(): void {
+    document.querySelector('.proqualifications')?.classList.add('hidden');
+    document.querySelector('.fresherqualifications')?.classList.add('hidden');
   }
 }

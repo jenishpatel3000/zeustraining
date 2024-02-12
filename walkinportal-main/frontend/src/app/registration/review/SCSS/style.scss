@@ -764,7 +764,7 @@ $mainfont: "Quicksand";
   padding: 2.4rem;
   background-color: $bgcolor;
   display: grid;
-  display: none;
+  // display: none;
   grid-template-columns: 1fr 1fr;
   .arrow {
     -webkit-appearance: none;
@@ -1022,7 +1022,7 @@ $mainfont: "Quicksand";
   padding: 2.4rem;
   background-color: $bgcolor;
   display: grid;
-  display: none;
+  // display: none;
   grid-template-columns: 1fr 1fr;
   .arrow {
     -webkit-appearance: none;

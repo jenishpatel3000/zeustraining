@@ -20,8 +20,9 @@ import {
 })
 export class RegistrationComponent implements OnInit {
   // show2: boolean = false;
-  isEnabled: boolean = false;
-
+  personalShow: boolean = true;
+  qualificationShow: boolean = false;
+  reviewShow: boolean = false;
   userData: userData = {
     PersonalInformation: {
       FirstName: '',
@@ -146,21 +147,31 @@ export class RegistrationComponent implements OnInit {
       console.error('Professional qualifications data is missing');
       return;
     }
-
-    const profQual = this.userData.Qualifications.ProfessionalQualifications;
-
+    this.userData.Qualifications.ProfessionalQualifications =
+      profQualifications;
+    const profQual = console.log(
+      this.userData.Qualifications.ProfessionalQualifications.ApplicantType
+    );
     // Check the applicant type and access properties accordingly
-    if (profQual.ApplicantType === 'Fresher') {
+    if (
+      this.userData.Qualifications.ProfessionalQualifications.ApplicantType ===
+      'Fresher'
+    ) {
       // Handle Fresher type
-      const fresherQualifications = profQual as Fresher;
+      const fresherQualifications = this.userData.Qualifications
+        .ProfessionalQualifications as Fresher;
       fresherQualifications.TechFamiliar = profQualifications.TechFamiliar;
       fresherQualifications.OtherTechFamiliar =
         profQualifications.OtherTechFamiliar;
       fresherQualifications.AppearedIn = profQualifications.AppearedIn;
       fresherQualifications.RoleAppearedIn = profQualifications.RoleAppearedIn;
-    } else if (profQual.ApplicantType === 'Experienced') {
+    } else if (
+      this.userData.Qualifications.ProfessionalQualifications.ApplicantType ===
+      'Experienced'
+    ) {
       // Handle Experienced type
-      const experiencedQualifications = profQual as Experienced;
+      const experiencedQualifications = this.userData.Qualifications
+        .ProfessionalQualifications as Experienced;
       experiencedQualifications.YearsOfExperience =
         profQualifications.YearsOfExperience;
       experiencedQualifications.CurrentCTC = profQualifications.CurrentCTC;
@@ -183,7 +194,7 @@ export class RegistrationComponent implements OnInit {
     // Console log for debugging (comment out in production)
     console.log(
       'in registration component Professional Qualifications:',
-      profQual
+      this.userData.Qualifications.ProfessionalQualifications
     );
   }
 
@@ -222,15 +233,31 @@ export class RegistrationComponent implements OnInit {
   }
   constructor() {}
 
-  showStep1(): void {
+  previous(): void {
     // const personalinfo = document.querySelector('.step1');
     // const qualifications = document.querySelector('.step2');
-    this.isEnabled = false;
+    if (!this.qualificationShow && this.reviewShow) {
+      this.personalShow = false;
+      this.qualificationShow = true;
+      this.reviewShow = false;
+    } else if (!this.personalShow && this.qualificationShow) {
+      this.personalShow = true;
+      this.qualificationShow = false;
+      this.reviewShow = false;
+    }
   }
-  showStep2(): void {
+  next(): void {
     // const personalinfo = document.querySelector('.step1');
     // const qualifications = document.querySelector('.step2');
-    this.isEnabled = true;
+    if (!this.qualificationShow && this.personalShow) {
+      this.personalShow = false;
+      this.qualificationShow = true;
+      this.reviewShow = false;
+    } else if (!this.reviewShow && this.qualificationShow) {
+      this.personalShow = false;
+      this.qualificationShow = false;
+      this.reviewShow = true;
+    }
   }
   ngOnInit(): void {
     console.log(this.userData);
