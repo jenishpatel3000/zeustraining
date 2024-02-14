@@ -29,7 +29,7 @@ export class JobPageComponent implements OnInit {
       )
       .subscribe((data) => {
         this.Job = data;
-        console.log(data);
+        // console.log(data);
       });
   }
 }

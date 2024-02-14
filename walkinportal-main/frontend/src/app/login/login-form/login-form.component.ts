@@ -7,6 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class LoginFormComponent implements OnInit {
+  passwordFieldType: string = 'password';
+
+  togglePassword(): void {
+    this.passwordFieldType =
+      this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
   constructor() {}
 
   ngOnInit(): void {}

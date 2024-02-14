@@ -49,6 +49,7 @@
       width: 21.6rem;
       height: 4rem;
       padding: 0;
+      cursor: pointer;
       border: 0rem;
       border-radius: 0.2rem;
       background: #3fd28b 0% 0% no-repeat padding-box;
@@ -79,6 +80,11 @@
       @include fontstyle($mainfont, 1.4rem, 300, #1f7a54, 1);
       margin-top: 0.4rem;
       text-transform: uppercase;
+    }
+    a {
+      @include fontstyle($mainfont, 1.4rem, 300, #1f7a54, 1);
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }

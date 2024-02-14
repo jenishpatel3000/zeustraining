@@ -40,9 +40,10 @@
             <div class="inputContainer2">
                 <div class="passwordWrapper">
 
-                    <input type="password" required="" class="customInput u1" name="password" id="passwordField"
-                        placeholder="Password*" />
-                    <button type="button" class="showPasswordBtn" onclick="togglePassword()">
+                    <input type="{{ passwordFieldType }}" required class="customInput u1" name="password"
+                        id="passwordField" placeholder="Password*" />
+
+                    <button type="button" class="showPasswordBtn" (click)="togglePassword()">
                         <img class="showPassword"
                             src="./assets/quantum screen assets/quantum screen assets/icons/preview.svg"
                             alt="Show password icon">
@@ -60,7 +61,7 @@
         </form>
     </div>
     <div class="button-div">
-        <button class="submit" type="submit">
+        <button class="submit" type="submit" routerLink="/jobs">
             <span class="btn-text">
 
                 LOG IN
@@ -69,7 +70,11 @@
     </div>
     <div class="notregistered">
         <div class="not">Not registered yet?</div>
-        <div class="create">create an account</div>
+        <div class="create"><a routerLink="/registration">
+
+                create an account
+            </a>
+        </div>
     </div>
 </div>
 <div class="footer">
