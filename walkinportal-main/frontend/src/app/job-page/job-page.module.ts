@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { JobPageRoutingModule } from './job-page-routing.module';
 
@@ -16,7 +16,7 @@ import { AppliedComponent } from './job-info/applied/applied.component';
     RolesOfferedComponent,
     AppliedComponent,
   ],
-  imports: [CommonModule, JobPageRoutingModule],
+  imports: [CommonModule, JobPageRoutingModule, FormsModule],
   exports: [
     JobPageComponent,
     JobInfoComponent,

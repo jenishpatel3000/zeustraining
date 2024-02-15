@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { IJobData } from '../JobData';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { IApplicationInfo, IJobData } from '../JobData';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from 'src/app/shared/data.service';
+
 @Component({
   selector: 'app-job-info',
   templateUrl: './job-info.component.html',
@@ -11,9 +13,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class JobInfoComponent implements OnInit {
   Jobs: IJobData[] = [];
-
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
-
+  selectedRoles: string[] = [];
+  applications: IApplicationInfo = {
+    ApplicationJobId: 0,
+    ApplicationId: Math.floor(Math.random() * 10000),
+    SelectedTimeSlots: '',
+    selectedRoles: [],
+    UploadedResume: null,
+  };
+  constructor(
+    private http: HttpClient,
+    private dataService: DataService,
+    private route: ActivatedRoute
+  ) {}
+  emitData() {
+    this.dataService.sendData(this.applications);
+  }
   fetchData(): void {
     this.http
       .get<IJobData[]>('/assets/JobDataJson.json')
@@ -29,13 +44,14 @@ export class JobInfoComponent implements OnInit {
       });
   }
   jobid: any;
-
+  // UploadApplicationData()
   ngOnInit(): void {
     this.fetchData();
     const id = this.route.snapshot.paramMap.get('id');
     if (id !== null) {
       // id is not null, so it's safe to use
       this.jobid = +id;
+      this.applications.ApplicationJobId = this.jobid;
       // Now use numericId as needed
     } else {
       this.jobid = 1;
@@ -57,6 +73,40 @@ export class JobInfoComponent implements OnInit {
     }
   }
 
+  toggleJobRole(role: string): void {
+    const index = this.selectedRoles.indexOf(role);
+    if (index !== -1) {
+      this.selectedRoles.splice(index, 1); // Remove role if already selected
+    } else {
+      this.selectedRoles.push(role); // Add role if not already selected
+    }
+    console.log('Selected job roles:', this.selectedRoles);
+    this.applications.selectedRoles = this.selectedRoles;
+    console.log('selected job roles:', this.applications.selectedRoles);
+  }
+  formatdate(date: Date): string {
+    const originalDate = new Date(date);
+    const monthNames = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    const day = originalDate.getDate();
+    const month = monthNames[originalDate.getMonth()];
+    const year = originalDate.getFullYear();
+    const formattedDateString = `${day}-${month}-${year}`;
+    // console.log(formattedDateString);
+    return formattedDateString;
+  }
   convertTo12HourFormat(time24: string) {
     const [hours, minutes, seconds] = time24.split(':');
 

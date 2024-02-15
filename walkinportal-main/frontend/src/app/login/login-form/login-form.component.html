@@ -31,7 +31,8 @@
         </div>
         <form method="post">
             <div class="inputContainer1">
-                <input type="text" required="" class="customInput u1" name="username" placeholder="Email ID*" />
+                <input type="text" required="" class="customInput u1" name="username" placeholder="Email ID*"
+                    [(ngModel)]="loginData.username" />
 
                 <div class="inputUnderline"></div>
             </div>
@@ -41,7 +42,7 @@
                 <div class="passwordWrapper">
 
                     <input type="{{ passwordFieldType }}" required class="customInput u1" name="password"
-                        id="passwordField" placeholder="Password*" />
+                        id="passwordField" placeholder="Password*" [(ngModel)]="loginData.password" />
 
                     <button type="button" class="showPasswordBtn" (click)="togglePassword()">
                         <img class="showPassword"
@@ -54,14 +55,16 @@
             <a href="#" class="forgot">FORGOT PASSWORD?</a>
 
 
-            <label class="remember"><input type="checkbox" class="rem-check" /> Remember Me</label>
+            <label class="remember"><input type="checkbox" class="rem-check" [checked]="loginData.rememberMe"
+                    (change)="onRememberMeChange($event)" />
+                Remember Me</label>
 
 
             <!-- Login button -->
         </form>
     </div>
     <div class="button-div">
-        <button class="submit" type="submit" routerLink="/jobs">
+        <button class="submit" type="submit" routerLink="/jobs" (click)="login()">
             <span class="btn-text">
 
                 LOG IN

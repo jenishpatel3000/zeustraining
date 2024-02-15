@@ -5,15 +5,15 @@ $inputcolor: #222222;
 $accentcolor: #1f7a54;
 $buttonbgcolor: #3fd28b;
 $buttoncolor: #25313f;
-$buttonshadow: 0px 3px 5px #0000003d;
-$divshadow: 0px 4px 6px #0000003d;
+$buttonshadow: 0rem 0.3rem 0.5rem #0000003d;
+$divshadow: 0rem 0.4rem 0.6rem #0000003d;
 $dropdowntitlecolor: #dbefff;
-$fontsize12: 12px;
-$fontsize14: 14px;
-$fontsize16: 16px;
-$fontsize20: 20px;
-$fontsize22: 22px;
-$fontsize24: 24px;
+$fontsize12: 1.2rem;
+$fontsize14: 1.4rem;
+$fontsize16: 1.6rem;
+$fontsize20: 2rem;
+$fontsize22: 2.2rem;
+$fontsize24: 2.4rem;
 
 .role-desc {
   background-color: $bgcolor;
@@ -27,13 +27,14 @@ $fontsize24: 24px;
 
     .role-title {
       font-size: $fontsize16;
-      padding: 16px;
+      padding: 1.6rem;
     }
 
     .expand-icon {
       margin-left: auto;
-      padding: 16px 16px;
-      border-left: 1px solid $seperatorcolor;
+      padding: 0.8rem 0.6rem;
+      // height: auto;
+      border-left: 0.1rem solid $seperatorcolor;
       display: flex;
 
       .rotated-image {
@@ -53,19 +54,20 @@ $fontsize24: 24px;
     .desc-title {
       font-size: $fontsize12;
       color: $labelcolor;
-      margin-top: 16px;
-      margin-left: 16px;
+      // margin-left: 1.6rem;
 
+      margin: 1.6rem 1.6rem;
       .desc {
+        margin: 1.6rem 0;
+
         font-size: $fontsize14;
         color: $inputcolor;
-        margin: 16px 0;
       }
 
       .line-seperator {
         width: 100%;
         background-color: $seperatorcolor;
-        height: 1px;
+        height: 0.1rem;
       }
     }
   }

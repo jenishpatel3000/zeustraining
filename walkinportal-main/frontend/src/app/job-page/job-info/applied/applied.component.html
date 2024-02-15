@@ -1,13 +1,15 @@
 <div class="green-tick">
-    <img src="../../../../assets/svgs/check.svg" alt="tick" class="tick">
+    <img src="./assets/svgs/check.svg" alt="tick" class="tick">
 </div>
-<div class="applied-div">
-    <div class="congratulations-message">Congratulations ! You have successfully applied for the walk-in opportunity</div>
+<div class="applied-div" *ngIf="application">
+    <div class="congratulations-message">Congratulations ! You have successfully applied for the walk-in opportunity
+    </div>
     <div class="line-seperator"></div>
     <div class="date-time-div">
         Date & Time of Walk-In :
+        <!-- <div class="date">03rd July 2021</div> -->
         <div class="date">03rd July 2021</div>
-        <div class="time">9:00 AM to 11:00 AM</div>
+        <div class="time">{{application.SelectedTimeSlots}}</div>
     </div>
     <div class="line-seperator"></div>
     <div class="venue-div">
@@ -21,7 +23,8 @@
     <div class="line-seperator"></div>
     <div class="things-to-remember-div">
         THINGS TO REMEMBER :
-        <div class="things-to-remember">- Please report 30 MINUTES prior to your reporting time.<br>- Download your Hall Ticket from below and carry it with you during your Walk-In.</div>
+        <div class="things-to-remember">- Please report 30 MINUTES prior to your reporting time.<br>- Download your Hall
+            Ticket from below and carry it with you during your Walk-In.</div>
     </div>
     <div class="line-seperator"></div>
     <button class="download-button">DOWNLOAD HALL TICKET</button>

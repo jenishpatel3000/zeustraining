@@ -34,6 +34,13 @@ export interface IJobData {
     EndTime: string;
   }[];
 }
+export interface IApplicationInfo {
+  ApplicationJobId: number;
+  ApplicationId: number;
+  SelectedTimeSlots: string;
+  selectedRoles: string[];
+  UploadedResume: File | null;
+}
 export enum Jobrole {
   val1 = 'Instructional Designer',
   val2 = 'Software Engineer',

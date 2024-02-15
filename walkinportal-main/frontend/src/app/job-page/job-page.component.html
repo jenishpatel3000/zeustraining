@@ -31,7 +31,7 @@
     <div class="JobDateLocationContainer">
         <label for="JobDate" class="JobDateLabel">Date & Time :</label>
         <div class="JobDate">
-            <div class="JobDateTime">{{job.JobStartDate}} to {{job.JobEndDate}}</div>
+            <div class="JobDateTime">{{formatdate(job.JobStartDate)}} to {{formatdate(job.JobEndDate)}}</div>
             <div class="verticalline"></div>
             <div class="JobLocation">
                 <img src="/assets/svgs/location-dot-solid.svg" class="locimg" alt="locationicon" />

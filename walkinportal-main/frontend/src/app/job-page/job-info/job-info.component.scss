@@ -5,8 +5,8 @@ $inputcolor: #222222;
 $accentcolor: #1f7a54;
 $buttonbgcolor: #3fd28b;
 $buttoncolor: #25313f;
-$buttonshadow: 0px 3px 5px #0000003d;
-$divshadow: 0px 4px 6px #0000003d;
+$buttonshadow: 0rem 0.3rem 0.5rem #0000003d;
+$divshadow: 0rem 0.4rem 0.6rem #0000003d;
 $dropdowntitlecolor: #dbefff;
 $fontsize12: 1.2rem;
 $fontsize14: 1.4rem;
@@ -17,7 +17,7 @@ $fontsize24: 2.4rem;
 
 .job-info-div {
   background-color: $bgcolor;
-  margin: 2.4rem 2.4rem 0 2.4rem;
+  margin: 2.4rem 2.4rem 2.4rem 2.4rem;
   padding: 1.6rem;
   box-shadow: $divshadow;
 
@@ -366,9 +366,9 @@ $mainfont: "Quicksand";
 
     .expand-icon {
       margin-left: auto;
-      padding: 1rem 1.6rem;
       border-left: 0.1rem solid $seperatorcolor;
       display: flex;
+      padding: 0.8rem 0.6rem;
 
       .rotated-image {
         transition: transform 0.5s ease;

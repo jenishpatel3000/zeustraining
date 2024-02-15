@@ -5,9 +5,9 @@
                 class="rotated-image" [class.rotated]="!isNotExpanded"></div>
     </div>
     <div class="role-desc" [class.invisible]="!isNotExpanded" [class.visible]="isNotExpanded">
-        <div class="desc-title" *ngFor="let desc of role.RoleDescription">
+        <div class="desc-title" *ngFor="let desc of role.RoleDescription; let last = last">
             {{desc.DescriptionTitle}} : <div class="desc" [innerText]="desc.Description"></div>
-            <div class="line-seperator"></div>
+            <div class="line-seperator" *ngIf="!last"></div>
         </div>
     </div>
 </div>

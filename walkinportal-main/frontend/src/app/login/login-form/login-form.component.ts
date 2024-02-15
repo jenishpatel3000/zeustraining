@@ -8,7 +8,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
   passwordFieldType: string = 'password';
+  loginData = {
+    username: '',
+    password: '',
+    rememberMe: false,
+  };
 
+  login() {
+    // Your login logic here
+    console.log('Username:', this.loginData.username);
+    console.log('Password:', this.loginData.password);
+    console.log('Remember Me:', this.loginData.rememberMe);
+  }
+  onRememberMeChange(event: Event): void {
+    this.loginData.rememberMe = (event.target as HTMLInputElement).checked;
+  }
   togglePassword(): void {
     this.passwordFieldType =
       this.passwordFieldType === 'password' ? 'text' : 'password';
