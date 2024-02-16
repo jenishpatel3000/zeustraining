@@ -9,7 +9,7 @@ export class ReviewComponent implements OnInit {
   @Input() UserData: any;
 
   fileName: string = '';
-
+  profilePhotoSrc: string = '../../../assets/images/default-profile-photo.png';
   constructor() {}
 
   uploadResume(event: any): void {
@@ -61,25 +61,38 @@ export class ReviewComponent implements OnInit {
       this.fileName = this.UserData.personalInfo.Resume.name;
     }
   }
-
-  photoinput = document.querySelector('.photo-input');
-  inputPhoto: any;
-  profilePhotoSrc: string = '../../../assets/images/default-profile-photo.png';
-
-  uploadProfilePhoto(event: any): void {
-    this.inputPhoto = event.target.files[0];
-    if (this.inputPhoto) {
-      // Assuming you have a method to handle image uploads and get a URL
-      // For example, you can use FileReader to read the image and convert it to a data URL
+  showPhoto() {
+    console.log(this.UserData.personalInfo.profilePhoto);
+    if (this.UserData.personalInfo.profilePhoto) {
+      // this.UserData.personalInfo.profilePhoto = this.inputPhoto
       const reader = new FileReader();
 
       reader.onload = (e: any) => {
-        this.profilePhotoSrc = e.target.result;
+        this.profilePhotoSrc = this.UserData.personalInfo.profilePhoto;
+        // this.personalInfo.profilePhoto = this.profilePhotoSrc;
       };
-
-      reader.readAsDataURL(this.inputPhoto);
+      // console.log(this.inputPhoto);
+      reader.readAsDataURL(this.UserData.personalInfo.profilePhoto);
     }
   }
+  // photoinput = document.querySelector('.photo-input');
+  // inputPhoto: any;
+  // profilePhotoSrc: string = '../../../assets/images/default-profile-photo.png';
+
+  // uploadProfilePhoto(event: any): void {
+  //   this.inputPhoto = event.target.files[0];
+  //   if (this.inputPhoto) {
+  //     // Assuming you have a method to handle image uploads and get a URL
+  //     // For example, you can use FileReader to read the image and convert it to a data URL
+  //     const reader = new FileReader();
+
+  //     reader.onload = (e: any) => {
+  //       this.profilePhotoSrc = e.target.result;
+  //     };
+
+  //     reader.readAsDataURL(this.inputPhoto);
+  //   }
+  // }
   private showFresherQualifications(): void {
     document.querySelector('.proqualifications')?.classList.add('hidden');
     document

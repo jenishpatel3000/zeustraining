@@ -59,15 +59,17 @@ export class PersonalInfoComponent implements OnInit {
   uploadProfilePhoto(event: any): void {
     this.inputPhoto = event.target.files[0];
     if (this.inputPhoto) {
+      this.personalInfo.profilePhoto = this.inputPhoto;
+
       // Assuming you have a method to handle image uploads and get a URL
       // For example, you can use FileReader to read the image and convert it to a data URL
       const reader = new FileReader();
 
       reader.onload = (e: any) => {
         this.profilePhotoSrc = e.target.result;
-        this.personalInfo.profilePhoto = this.profilePhotoSrc;
+        // this.personalInfo.profilePhoto = this.profilePhotoSrc;
       };
-
+      console.log(this.inputPhoto);
       reader.readAsDataURL(this.inputPhoto);
     }
   }

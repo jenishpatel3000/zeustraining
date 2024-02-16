@@ -92,8 +92,8 @@
             <div class="flex-div">
                 <img [src]=profilePhotoSrc alt="default-profile-photo" class="profile-photo">
                 <label for="photo-input" class="photo-input-label" (change)="uploadProfilePhoto($event)">
-                    <input type="file" class="photo-input" id="photo-input" [(ngModel)]="personalInfo.ProfilePhoto"
-                        (change)="updatePersonalInfo()" accept="image/jpeg,image/jpg,image/png">
+                    <input type="file" class="photo-input" id="photo-input" (change)="updatePersonalInfo()"
+                        accept="image/jpeg,image/jpg,image/png" />
                     <div class="upload-label">UPLOAD DISPLAY PICTURE</div>
                 </label>
                 <div class="input-desc">Max. image size: 5 MB</div>

@@ -29,7 +29,7 @@ export class JobInfoComponent implements OnInit {
   emitData() {
     this.dataService.sendData(this.applications);
   }
-  fetchData(): void {
+  fetchData(jobid: number): void {
     this.http
       .get<IJobData[]>('/assets/JobDataJson.json')
       .pipe(
@@ -46,7 +46,6 @@ export class JobInfoComponent implements OnInit {
   jobid: any;
   // UploadApplicationData()
   ngOnInit(): void {
-    this.fetchData();
     const id = this.route.snapshot.paramMap.get('id');
     if (id !== null) {
       // id is not null, so it's safe to use
@@ -57,6 +56,7 @@ export class JobInfoComponent implements OnInit {
       this.jobid = 1;
       // Handle the case where 'id' is null
     }
+    this.fetchData(this.jobid);
     console.log(this.jobid);
   }
 
