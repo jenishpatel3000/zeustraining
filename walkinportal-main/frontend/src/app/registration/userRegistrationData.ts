@@ -2,11 +2,12 @@ export interface userData {
   PersonalInformation: {
     FirstName: string;
     LastName: string;
-    ProfilePhoto: File | null;
+    ProfilePhoto: Blob | null;
     Email: string;
     countryCode: string;
     PhoneNumber: string;
-    Resume: File | null;
+    Resume: Blob | null;
+    ResumeFileName: string;
     PortfolioURL: string;
     PreferredJobRoles: JobRoles[];
     Referral: string;

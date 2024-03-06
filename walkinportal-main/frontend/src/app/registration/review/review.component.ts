@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { RegistrationData, UserRegistrationRequest } from 'src/interface/interfaces';
 
 @Component({
   selector: 'app-review',
@@ -6,11 +7,12 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./SCSS/style.scss'],
 })
 export class ReviewComponent implements OnInit {
-  @Input() UserData: any;
+  @Input() userData!: UserRegistrationRequest;
+  @Input() registrationData!: RegistrationData;
 
   fileName: string = '';
   profilePhotoSrc: string = '../../../assets/images/default-profile-photo.png';
-  constructor() {}
+  constructor() { }
 
   uploadResume(event: any): void {
     const inputFile = event.target.files[0];
@@ -19,85 +21,65 @@ export class ReviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // const photoinput = document.querySelector('.photo-input');
-    // const inputPhoto = this.UserData.PersonalInformation.ProfilePhoto;
-    // let profilePhotoSrc = '../../../assets/images/default-profile-photo.png';
-    // if (inputPhoto) {
-    //   this.profilePhotoSrc = inputPhoto;
-    // }
-
-    // const reader = new FileReader();
-    // reader.onload = (e: any) => {
-    //   this.profilePhotoSrc = e.target.result;
-    //   this.UserData.PersonalInformation.profilePhoto = this.profilePhotoSrc;
-    // };
-    // reader.readAsDataURL(this.profilePhotoSrc);
-    console.log('jenish logging from review object' + this.UserData);
-    // Assuming you have personalInfo.Resume available to initialize fileName
 
     if (
-      this.UserData &&
-      this.UserData.Qualifications &&
-      this.UserData.Qualifications.ProfessionalQualifications
+      this.userData
     ) {
       const applicantType =
-        this.UserData.Qualifications.ProfessionalQualifications.ApplicantType;
+        this.userData.applicationTypeId;
       console.log('ApplicantType:', applicantType);
 
-      if (applicantType === 'Fresher') {
+      if (applicantType === 1) {
         this.showFresherQualifications();
-      } else if (applicantType === 'Experienced') {
+      } else if (applicantType === 2) {
         this.showProfessionalQualifications();
       } else {
         this.hideAllQualifications();
       }
     }
 
-    if (
-      this.UserData &&
-      this.UserData.personalInfo &&
-      this.UserData.personalInfo.Resume
-    ) {
-      this.fileName = this.UserData.personalInfo.Resume.name;
-    }
+    this.showPhoto();
   }
   showPhoto() {
-    console.log(this.UserData.personalInfo.profilePhoto);
-    if (this.UserData.personalInfo.profilePhoto) {
-      // this.UserData.personalInfo.profilePhoto = this.inputPhoto
-      const reader = new FileReader();
-
-      reader.onload = (e: any) => {
-        this.profilePhotoSrc = this.UserData.personalInfo.profilePhoto;
-        // this.personalInfo.profilePhoto = this.profilePhotoSrc;
-      };
-      // console.log(this.inputPhoto);
-      reader.readAsDataURL(this.UserData.personalInfo.profilePhoto);
+    this.userData.profilePhoto;
+    if (this.userData.profilePhoto) {
+      this.profilePhotoSrc = this.userData.profilePhoto;
     }
   }
-  // photoinput = document.querySelector('.photo-input');
-  // inputPhoto: any;
-  // profilePhotoSrc: string = '../../../assets/images/default-profile-photo.png';
 
-  // uploadProfilePhoto(event: any): void {
-  //   this.inputPhoto = event.target.files[0];
-  //   if (this.inputPhoto) {
-  //     // Assuming you have a method to handle image uploads and get a URL
-  //     // For example, you can use FileReader to read the image and convert it to a data URL
-  //     const reader = new FileReader();
+  getRoleName(roleId: number): string {
+    const role = this.registrationData.role.find(role => role.roleId === roleId);
+    return role ? role.roleName : 'Unknown Role';
+  }
 
-  //     reader.onload = (e: any) => {
-  //       this.profilePhotoSrc = e.target.result;
-  //     };
+  getCollegeName(collegeId: number): string {
+    const college = this.registrationData.college.find(college => college.collegeId === collegeId);
+    return college ? college.collegeName : 'Unknown Role';
+  }
 
-  //     reader.readAsDataURL(this.inputPhoto);
-  //   }
-  // }
+  getStreamName(streamId: number): string {
+    const stream = this.registrationData.stream.find(stream => stream.streamId === streamId);
+    return stream ? stream.streamName : 'Unknown Role';
+  }
+
+  getTechName(techId: number): string {
+    const tech = this.registrationData.tech.find(tech => tech.techId === techId);
+    return tech ? tech.techName : 'Unknown Role';
+  }
+
+  getApplicationTypeName(id: number): string{
+    const applicationTypes = this.registrationData.applicationTypes.find(applicationTypes => applicationTypes.applicationTypeId === id);
+    return applicationTypes ? applicationTypes.applicationTypeName : 'Unknown Role';
+  }
+
+  getQualificationName(qualificationId: number): string{
+    const qualification = this.registrationData.qualification.find(qualification => qualification.qualificationId === qualificationId);
+    return qualification ? qualification.qualificationName : 'Unknown Role';
+  }
+
   private showFresherQualifications(): void {
     document.querySelector('.proqualifications')?.classList.add('hidden');
-    document
-      .querySelector('.fresherqualifications')
-      ?.classList.remove('hidden');
+    document.querySelector('.fresherqualifications')?.classList.remove('hidden');
   }
 
   private showProfessionalQualifications(): void {

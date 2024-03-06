@@ -1,0 +1,8 @@
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\bin\Debug\datetime2.exe.config
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\bin\Debug\datetime2.exe
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\bin\Debug\datetime2.pdb
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\obj\Debug\datetime2.csproj.AssemblyReference.cache
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\obj\Debug\datetime2.csproj.SuggestedBindingRedirects.cache
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\obj\Debug\datetime2.csproj.CoreCompileInputs.cache
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\obj\Debug\datetime2.exe
+D:\office\GithubTaskRepo\zeustraining\TASK12\datetime\datetime2\obj\Debug\datetime2.pdb
